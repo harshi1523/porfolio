@@ -18,9 +18,8 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
     setError(null);
 
-    // You will need to get your actual access key from https://web3forms.com/
-    // and replace the 'YOUR_ACCESS_KEY_HERE' placeholder.
-    const accessKey = 'YOUR_ACCESS_KEY_HERE';
+    // Web3Forms access key provided by the user
+    const accessKey = '0a2147db-9293-4389-bae3-49562aac7fa2';
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -124,6 +123,7 @@ const ContactForm: React.FC = () => {
                       <label className="text-[10px] uppercase font-bold text-textMuted tracking-widest pl-1">Full Name</label>
                       <input 
                         type="text" 
+                        name="name"
                         required
                         className="w-full bg-secondary/50 border border-border px-6 py-4 rounded-xl focus:border-accent focus:bg-secondary outline-none text-textPrimary transition-all placeholder:text-textMuted/30"
                         placeholder="John Doe"
@@ -135,6 +135,7 @@ const ContactForm: React.FC = () => {
                       <label className="text-[10px] uppercase font-bold text-textMuted tracking-widest pl-1">Email Address</label>
                       <input 
                         type="email" 
+                        name="email"
                         required
                         className="w-full bg-secondary/50 border border-border px-6 py-4 rounded-xl focus:border-accent focus:bg-secondary outline-none text-textPrimary transition-all placeholder:text-textMuted/30"
                         placeholder="john@example.com"
@@ -147,6 +148,7 @@ const ContactForm: React.FC = () => {
                     <label className="text-[10px] uppercase font-bold text-textMuted tracking-widest pl-1">Your Message</label>
                     <textarea 
                       rows={5}
+                      name="message"
                       required
                       className="w-full bg-secondary/50 border border-border px-6 py-4 rounded-xl focus:border-accent focus:bg-secondary outline-none text-textPrimary transition-all resize-none placeholder:text-textMuted/30"
                       placeholder="How can I help you today?"
