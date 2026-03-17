@@ -20,6 +20,10 @@ The portfolio uses a sophisticated, neutral color palette with a mix of light-gr
 | **Off-White** | `#F8F9FA` | Skills section background |
 | **Charcoal** | `#1A1A1A` | Skill chips and project cards |
 
+- [x] Document detailed typography system (24px/17px)
+- [x] Revert "Scaling Application Typography System" (Reset to a1d89ad)
+- [x] Increase all main section heading sizes (About, Skills, Projects, Internship, Achievements, Certifications)
+
 ### Typography System (Standardized)
 
 The portfolio follows a strict typographic hierarchy combining **Playfair Display** (Serif) for elegance and **Inter** (Sans) for clarity.
@@ -28,7 +32,7 @@ The portfolio follows a strict typographic hierarchy combining **Playfair Displa
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Hero Name** | Main Identity | Playfair Display | `clamp(3.5rem, 11vw, 11rem)` | 700 (Bold) | Uppercase, leading-[0.85] |
 | **H1** | Page Header | Playfair Display | 52px | 700 (Bold) | Standard main title scale |
-| **H2** | Section Titles | Playfair Display | 36px | 600 (Semi-bold) | Used for "About", "Projects", etc. |
+| **H2** | Section Titles | Playfair Display | 36px - 60px | 600 (Semi-bold) | Responsive `text-4xl md:text-6xl` |
 | **H3 (Serif)** | Academic/Awards | Playfair Display | 24px | 600 (Semi-bold) | Education & Achievements |
 | **H3 (Sans)** | Professional/UI | Inter | 24px | 600 (Semi-bold) | Projects, Internship, Certs |
 | **Paragraph** | Body Content | Inter | 17px | 400 (Regular) | 1.7 line-height, optimized for reading |
@@ -46,7 +50,7 @@ The portfolio follows a strict typographic hierarchy combining **Playfair Displa
 - **CTAs**: 15px bold Inter, Uppercase, 10px px-10.
 
 #### 2. About Me Section
-- **Section Title**: 36px Playfair Display (`text-h2`).
+- **Section Title**: 36px - 60px Playfair Display (`text-4xl md:text-6xl`).
 - **Body Text**: 17px Inter (`text-paragraph`), 1.7 line-height.
 
 #### 3. Education & Achievements

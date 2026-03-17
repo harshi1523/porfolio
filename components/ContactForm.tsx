@@ -55,7 +55,7 @@ const ContactForm: React.FC = () => {
           </div>
 
           <div className="reveal delay-200">
-            <h3 className="font-sans font-bold text-midnight text-sm tracking-widest uppercase mb-10">Quick Message</h3>
+            <h3 className="font-sans font-bold text-white text-sm tracking-widest uppercase mb-10">Quick Message</h3>
             {submitted ? (
               <div className="bg-apres/10 border border-apres p-8 text-apres font-sans font-bold text-center reveal">
                 <p className="text-2xl mb-2">✓</p>

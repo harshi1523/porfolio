@@ -23,7 +23,7 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="bg-[#e2e4e6] py-section px-6 md:px-12 relative overflow-hidden scroll-mt-32">
       <div className="max-w-[1400px] w-full mx-auto relative z-10">
-        <h2 className="font-serif text-h2 text-zinc-800 mb-20 tracking-tight reveal">
+        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-zinc-800 mb-20 tracking-tight reveal">
           Selected Projects
         </h2>
 

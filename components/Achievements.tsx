@@ -16,9 +16,9 @@ const Achievements: React.FC = () => {
       <div className="absolute bottom-10 left-10 text-apres text-2xl opacity-50">★</div>
       
       <div className="max-w-6xl mx-auto text-center md:text-left">
-        <h2 className="font-serif text-h2 text-midnight mb-16 inline-block relative reveal">
+        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-midnight mb-16 inline-block relative reveal">
           Achievements & Activities
-          <span className="absolute -right-12 top-0 text-apres text-3xl">★</span>
+          <span className="absolute -right-16 top-0 text-apres text-5xl">★</span>
         </h2>
         
         <div className="grid md:grid-cols-2 gap-8">

@@ -7,7 +7,7 @@ const About: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 items-start">
           <div className="md:col-span-1 reveal">
-            <h2 className="font-serif text-h2 text-midnight leading-tight sticky top-39">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-midnight leading-tight sticky top-39">
               About Me
             </h2>
           </div>

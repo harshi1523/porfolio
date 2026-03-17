@@ -24,7 +24,7 @@ const Internship: React.FC = () => {
   return (
     <section id="internship" className="py-section px-6 md:px-12 bg-[#e5e7eb] scroll-mt-32">
       <div className="max-w-[1400px] w-full mx-auto relative z-10">
-        <h2 className="font-serif text-h2 text-zinc-800 mb-20 tracking-tight reveal">
+        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-zinc-800 mb-20 tracking-tight reveal">
           Professional Experience
         </h2>
         

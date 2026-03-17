@@ -12,7 +12,7 @@ const Certifications: React.FC = () => {
   return (
     <section className="py-section px-6 md:px-12 bg-slopes">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-serif text-h2 text-midnight mb-12 reveal">Certifications</h2>
+        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-midnight mb-20 tracking-tight reveal">Certifications</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {certs.map((cert, idx) => (
             <div 
