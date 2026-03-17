@@ -63,13 +63,6 @@ const Hero: React.FC = () => {
         animate="visible"
       >
         <div className="flex flex-col items-start gap-4">
-          <motion.div 
-            variants={itemVariants}
-            className="flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-bold uppercase tracking-widest mb-4"
-          >
-            <Sparkles className="w-3 h-3" />
-            Available for AI/ML projects
-          </motion.div>
 
           <motion.h1 
             variants={itemVariants}
