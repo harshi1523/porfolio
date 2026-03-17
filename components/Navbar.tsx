@@ -45,8 +45,8 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <a href="#home" className="flex items-center gap-2 group">
           <Terminal className="w-8 h-8 text-accent group-hover:scale-110 transition-transform" />
-          <span className="font-bodoni text-xl font-bold tracking-tighter text-textPrimary uppercase">
-            LH<span className="text-accent">.</span>DESIGN
+          <span className="font-bodoni text-lg md:text-xl font-bold tracking-tight text-textPrimary uppercase whitespace-nowrap">
+            LAKSHMI <span className="text-accent">HARSHITHA</span> PERAVALI
           </span>
         </a>
 
