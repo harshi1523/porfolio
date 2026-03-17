@@ -103,9 +103,18 @@ const Hero: React.FC = () => {
       <div className="absolute bottom-10 left-0 w-full flex items-center justify-between px-12 md:px-24 z-20 pointer-events-none">
         <div className="h-[1px] flex-grow bg-border/30 max-w-[100px] hidden md:block" />
         <div className="flex gap-12 text-textSecondary pointer-events-auto">
-          {['LinkedIn', 'GitHub', 'Twitter'].map((social) => (
-            <a key={social} href="#" className="font-sans text-[10px] uppercase tracking-[0.3em] font-bold opacity-40 hover:opacity-100 hover:text-accent transition-all cursor-pointer">
-              // {social}
+          {[
+            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/lakshmi-harshitha-' },
+            { name: 'GitHub', url: 'https://github.com/lakshmiharshithaperavali' }
+          ].map((social) => (
+            <a 
+              key={social.name} 
+              href={social.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-sans text-[10px] uppercase tracking-[0.3em] font-bold opacity-40 hover:opacity-100 hover:text-accent transition-all cursor-pointer"
+            >
+              // {social.name}
             </a>
           ))}
         </div>
