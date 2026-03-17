@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
         <p className="text-midnight font-sans text-paragraph mb-4 tracking-wide opacity-90 reveal">
           Hello, My name is
         </p>
-        <h1 className="font-serif text-h2 md:text-h1 text-midnight leading-none tracking-tighter mb-8 reveal delay-100">
+        <h1 className="font-serif text-[clamp(3.5rem,11vw,11rem)] font-bold text-midnight leading-[0.85] tracking-tighter mb-12 uppercase max-w-4xl">
           LAKSHMI <br /> HARSHITHA
         </h1>
         <p className="text-midnight font-sans text-paragraph md:text-[20px] mb-12 max-w-2xl font-light tracking-wide opacity-80 leading-relaxed reveal delay-200">

@@ -20,9 +20,49 @@ The portfolio uses a sophisticated, neutral color palette with a mix of light-gr
 | **Off-White** | `#F8F9FA` | Skills section background |
 | **Charcoal** | `#1A1A1A` | Skill chips and project cards |
 
-### Typography
-- **Serif Font**: *Playfair Display* (used for large, elegant headings and italic accents).
-- **Sans-Serif Font**: *Inter* (used for body text, navigation, and pill-tags).
+### Typography System (Standardized)
+
+The portfolio follows a strict typographic hierarchy combining **Playfair Display** (Serif) for elegance and **Inter** (Sans) for clarity.
+
+| Level | Usage | Font Family | Size | Weight | Details |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Hero Name** | Main Identity | Playfair Display | `clamp(3.5rem, 11vw, 11rem)` | 700 (Bold) | Uppercase, leading-[0.85] |
+| **H1** | Page Header | Playfair Display | 52px | 700 (Bold) | Standard main title scale |
+| **H2** | Section Titles | Playfair Display | 36px | 600 (Semi-bold) | Used for "About", "Projects", etc. |
+| **H3 (Serif)** | Academic/Awards | Playfair Display | 24px | 600 (Semi-bold) | Education & Achievements |
+| **H3 (Sans)** | Professional/UI | Inter | 24px | 600 (Semi-bold) | Projects, Internship, Certs |
+| **Paragraph** | Body Content | Inter | 17px | 400 (Regular) | 1.7 line-height, optimized for reading |
+| **Small** | Captions/Labels | Inter | 14px | 400 (Regular) | Years, Issuers, and meta-data |
+| **UI Elements** | Nav & Buttons | Inter | 14.5px - 15px | 500 - 600 | Uppercase for buttons, tracking-wide |
+| **Pills** | Tech Tags | Inter | 13px | 500 (Medium) | Used in Skills and Projects |
+
+---
+
+### Section-Specific Typography Rules
+
+#### 1. Hero Section
+- **Greeting**: "Hello, My name is" → 17px Inter (`text-paragraph`).
+- **Subheadline**: 17px regular (mobile) / 20px light (desktop) Inter.
+- **CTAs**: 15px bold Inter, Uppercase, 10px px-10.
+
+#### 2. About Me Section
+- **Section Title**: 36px Playfair Display (`text-h2`).
+- **Body Text**: 17px Inter (`text-paragraph`), 1.7 line-height.
+
+#### 3. Education & Achievements
+- **Focus**: High elegance. 
+- **Side Headings**: 24px Playfair Display.
+- **Detail text**: 14px Inter with wide tracking.
+
+#### 3. Professional Cards (Projects/Internship/Certs)
+- **Focus**: Efficiency and clarity.
+- **Card Titles**: 24px Inter Bold.
+- **Descriptions**: 17px Inter.
+- **Tags**: 13px Inter Medium in charcoal capsules.
+
+#### 4. Skills Section
+- **Category Labels**: 14px Inter Bold, Uppercase, 0.2em tracking.
+- **Tags**: 13px Inter Medium, charcoal background with subtle hover glows.
 
 ---
 
