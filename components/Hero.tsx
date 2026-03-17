@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
 
           <motion.h1 
             variants={itemVariants}
-            className="font-bodoni text-[clamp(3.5rem,10vw,10rem)] font-bold text-textPrimary leading-[0.9] tracking-tight mb-6 uppercase text-left"
+            className="font-bodoni text-[clamp(2.5rem,8vw,6.5rem)] font-bold text-textPrimary leading-[0.9] tracking-tight mb-6 uppercase text-left"
           >
             LAKSHMI<br />
             <span className="text-accent neon-glow">HARSHITHA</span>

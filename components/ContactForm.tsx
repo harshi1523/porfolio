@@ -32,7 +32,7 @@ const ContactForm: React.FC = () => {
             <div className="w-12 h-px bg-accent" />
             <span className="text-accent text-[10px] uppercase font-bold tracking-[0.4em]">Get In Touch</span>
           </div>
-          <h2 className="font-bodoni text-[5rem] md:text-[8rem] text-textPrimary leading-none mb-20 uppercase tracking-tighter">
+          <h2 className="font-bodoni text-[3rem] md:text-[5rem] text-textPrimary leading-none mb-20 uppercase tracking-tighter">
             Let's <span className="text-accent italic font-light lowercase">Collaborate</span>
           </h2>
         </ScrollReveal>
@@ -45,13 +45,13 @@ const ContactForm: React.FC = () => {
                 <div className="space-y-10">
                   <div className="group">
                     <p className="text-textMuted text-[10px] uppercase tracking-widest mb-3">WhatsApp / Call</p>
-                    <a href="tel:+919392959397" className="font-bodoni text-4xl text-textPrimary hover:text-accent transition-colors block leading-tight">
+                    <a href="tel:+919392959397" className="font-bodoni text-2xl md:text-3xl text-textPrimary hover:text-accent transition-colors block leading-tight">
                       +91 93929 59397
                     </a>
                   </div>
                   <div className="group">
                     <p className="text-textMuted text-[10px] uppercase tracking-widest mb-3">Digital Inbox</p>
-                    <a href="mailto:peravalilakshmiharshitha@gmail.com" className="font-bodoni text-3xl md:text-3xl lg:text-4xl text-textPrimary hover:text-highlight transition-colors block break-all leading-tight">
+                    <a href="mailto:peravalilakshmiharshitha@gmail.com" className="font-bodoni text-xl md:text-2xl text-textPrimary hover:text-highlight transition-colors block break-all leading-tight">
                       peravalilakshmiharshitha<br/>@gmail.com
                     </a>
                   </div>
@@ -77,7 +77,7 @@ const ContactForm: React.FC = () => {
             <div className="bg-card border border-border p-10 md:p-14 rounded-[2rem] accent-glow-strong relative overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-accent/5 blur-3xl rounded-full" />
               
-              <h3 className="font-bodoni text-3xl text-textPrimary uppercase mb-10">Quick <span className="text-accent">Message</span></h3>
+              <h3 className="font-bodoni text-2xl text-textPrimary uppercase mb-10">Quick <span className="text-accent">Message</span></h3>
               
               {submitted ? (
                 <div className="py-20 text-center animate-in fade-in zoom-in duration-500">
