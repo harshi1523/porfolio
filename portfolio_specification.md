@@ -20,12 +20,9 @@ The portfolio uses a sophisticated, neutral color palette with a mix of light-gr
 | **Off-White** | `#F8F9FA` | Skills section background |
 | **Charcoal** | `#1A1A1A` | Skill chips and project cards |
 
-### Typography (Standardized Hierarchy)
-- **H1 (Main Titles)**: 52px, Playfair Display (Serif), Bold 700.
-- **H2 (Section Titles)**: 42px, Playfair Display (Serif), Semi-bold 600.
-- **H3 (Subsection/Card Titles)**: 34px, Playfair Display (Serif), Semi-bold 600.
-- **Paragraph text**: 17px, Inter (Sans-serif), Normal 400, 1.7 Line-height.
-- **Small Text/Nav/Buttons**: 14px-15px, Inter (Sans-serif).
+### Typography
+- **Serif Font**: *Playfair Display* (used for large, elegant headings and italic accents).
+- **Sans-Serif Font**: *Inter* (used for body text, navigation, and pill-tags).
 
 ---
 

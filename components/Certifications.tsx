@@ -20,7 +20,7 @@ const Certifications: React.FC = () => {
               className={`bg-mountain p-card-p border border-midnight/10 hover:border-apres transition-all group reveal delay-${(idx + 1) * 100}`}
             >
               <p className="text-apres text-small uppercase tracking-widest mb-4">{cert.issuer}</p>
-              <h3 className="font-serif text-white text-h3 leading-tight group-hover:text-white/80">
+              <h3 className="font-sans text-white text-h3 leading-tight group-hover:text-white/80">
                 {cert.name}
               </h3>
             </div>

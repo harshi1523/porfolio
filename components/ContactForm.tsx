@@ -28,7 +28,7 @@ const ContactForm: React.FC = () => {
         
         <div className="grid md:grid-cols-2 gap-24">
           <div className="reveal delay-100">
-            <h3 className="font-serif font-bold text-apres text-small tracking-widest uppercase mb-10">Contact Information</h3>
+            <h3 className="font-sans font-bold text-apres text-small tracking-widest uppercase mb-10">Contact Information</h3>
             <div className="space-y-8 mb-12">
               <div className="flex items-center gap-6">
                 <div className="w-12 h-12 bg-apres flex items-center justify-center text-white rounded-full text-xl shadow-md">📞</div>
