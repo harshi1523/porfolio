@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
             className="flex flex-wrap gap-8 items-center"
           >
             <a 
-              href="/CV.pdf" 
+              href="/Harshitha peravali Resume.pdf" 
               download 
               className="bg-accent hover:bg-accent/90 text-white px-12 py-5 font-sans text-button uppercase transition-all flex items-center gap-3 shadow-[0_0_30px_rgba(255,46,99,0.3)] hover:shadow-[0_0_40px_rgba(255,46,99,0.5)] hover:-translate-y-1"
             >
