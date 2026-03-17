@@ -19,49 +19,28 @@ const About: React.FC = () => {
           </div>
         </ScrollReveal>
         
-        <div className="grid md:grid-cols-5 gap-16 items-start">
-          <div className="md:col-span-3 space-y-6">
+        <div className="grid md:grid-cols-4 gap-16 items-start">
+          <div className="md:col-span-4 lg:col-span-3 space-y-6">
             <ScrollReveal delay={0.1}>
-              <p className="font-sans text-textSecondary text-paragraph leading-relaxed">
+              <p className="font-sans text-textSecondary text-paragraph leading-relaxed text-left">
                 I am an Undergraduate student pursuing my Bachelor's degree in <span className="text-highlight font-medium">Artificial Intelligence and Machine Learning</span>. My academic journey is fueled by a deep interest in building intelligent systems that can solve real-world problems.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <p className="font-sans text-textSecondary text-paragraph leading-relaxed">
+              <p className="font-sans text-textSecondary text-paragraph leading-relaxed text-left">
                 With a strong foundation in <span className="text-textPrimary font-semibold">Natural Language Processing (NLP)</span> and <span className="text-textPrimary font-semibold">Generative AI</span>, I am focused on creating innovative solutions that bridge the gap between complex research and practical application.
               </p>
             </ScrollReveal>
             
-            <div className="grid sm:grid-cols-2 gap-8 pt-6">
+            <div className="pt-6">
               <ScrollReveal delay={0.3}>
-                <div className="p-6 bg-card border border-border rounded-2xl accent-glow transition-all group">
-                  <Target className="text-accent w-8 h-8 mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-textPrimary font-bold uppercase tracking-widest text-xs mb-2">My Goal</h3>
-                  <p className="text-textMuted text-sm leading-relaxed">Developing AI that is both impactful and ethical for the wider society.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={0.4}>
-                <div className="p-6 bg-card border border-border rounded-2xl accent-glow transition-all group">
+                <div className="max-w-md p-6 bg-card border border-border rounded-2xl accent-glow transition-all group">
                   <Zap className="text-highlight w-8 h-8 mb-4 group-hover:scale-110 transition-transform" />
                   <h3 className="text-textPrimary font-bold uppercase tracking-widest text-xs mb-2">My Focus</h3>
                   <p className="text-textMuted text-sm leading-relaxed">Specializing in LLMs, Prompt Engineering, and RAG architectures.</p>
                 </div>
               </ScrollReveal>
             </div>
-          </div>
-          
-          <div className="md:col-span-2">
-            <ScrollReveal delay={0.3}>
-              <div className="relative group">
-                <div className="absolute inset-0 bg-accent/20 rounded-3xl blur-2xl group-hover:bg-accent/30 transition-all" />
-                <div className="relative aspect-square rounded-3xl overflow-hidden border border-border bg-secondary flex items-center justify-center p-8">
-                  <div className="text-center">
-                    <div className="text-6xl font-bodoni text-accent mb-2">#NLP</div>
-                    <div className="text-xl font-sans text-textSecondary uppercase tracking-widest">Specialist</div>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
           </div>
         </div>
       </div>
