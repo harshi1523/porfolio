@@ -44,15 +44,9 @@ const ContactForm: React.FC = () => {
                 <h3 className="font-sans font-bold text-textMuted text-[10px] tracking-widest uppercase mb-10 pb-4 border-b border-border inline-block">Contact Details</h3>
                 <div className="space-y-10">
                   <div className="group">
-                    <p className="text-textMuted text-[10px] uppercase tracking-widest mb-3">WhatsApp / Call</p>
-                    <a href="tel:+919392959397" className="font-bodoni text-xl md:text-2xl text-textPrimary hover:text-accent transition-colors block leading-tight">
-                      +91 93929 59397
-                    </a>
-                  </div>
-                  <div className="group">
                     <p className="text-textMuted text-[10px] uppercase tracking-widest mb-3">Digital Inbox</p>
-                    <a href="mailto:peravalilakshmiharshitha@gmail.com" className="font-bodoni text-lg md:text-xl text-textPrimary hover:text-highlight transition-colors block break-all leading-tight">
-                      peravalilakshmiharshitha<br/>@gmail.com
+                    <a href="mailto:peravalilakshmiharshitha@gmail.com" className="font-bodoni text-lg md:text-xl text-textPrimary hover:text-highlight transition-colors block leading-tight">
+                      peravalilakshmiharshitha@gmail.com
                     </a>
                   </div>
                 </div>

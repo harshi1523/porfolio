@@ -42,8 +42,7 @@ const Footer: React.FC = () => {
               <div>
                 <h3 className="font-sans font-bold text-textPrimary text-xs uppercase tracking-[0.3em] mb-8">Contact</h3>
                 <ul className="space-y-4">
-                  <li><a href="mailto:peravalilakshmiharshitha@gmail.com" className="text-textSecondary hover:text-highlight transition-colors text-[11px] break-all font-medium">peravalilakshmiharshitha@gmail.com</a></li>
-                  <li><a href="tel:+919392959397" className="text-textSecondary hover:text-highlight transition-colors text-[11px] font-medium">+91 93929 59397</a></li>
+                  <li><a href="mailto:peravalilakshmiharshitha@gmail.com" className="text-textSecondary hover:text-highlight transition-colors text-[11px] font-medium">peravalilakshmiharshitha@gmail.com</a></li>
                 </ul>
               </div>
             </div>
