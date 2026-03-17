@@ -25,7 +25,7 @@ const Achievements: React.FC = () => {
           {achievements.map((item, idx) => (
             <div key={idx} className={`bg-mountain border border-midnight/10 p-card-p flex items-center gap-6 hover:bg-apres/10 transition-all reveal delay-${(idx + 1) * 100}`}>
               <span className="text-4xl">{item.icon}</span>
-              <p className="font-sans font-medium text-white text-h3 text-left">
+              <p className="font-serif font-medium text-white text-h3 text-left">
                 {item.text}
               </p>
             </div>

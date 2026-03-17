@@ -33,7 +33,7 @@ const Internship: React.FC = () => {
           <div className="bg-[#1c1c1c] rounded-[2.5rem] p-card-p shadow-[0_60px_120px_-20px_rgba(0,0,0,0.15),0_30px_60px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_80px_160px_-20px_rgba(0,0,0,0.2),0_40px_80px_-15px_rgba(0,0,0,0.15)] transition-all duration-[1000ms] ease-out transform hover:-translate-y-4 flex flex-col border border-white/5 reveal w-full">
             <div className="flex items-center gap-4 mb-3">
               <Briefcase className="w-8 h-8 text-zinc-400" />
-              <h3 className="font-sans font-bold text-white text-h3">
+              <h3 className="font-serif font-bold text-white text-h3">
                 AdeptSK Solutions Private Ltd
               </h3>
             </div>
@@ -69,7 +69,7 @@ const Internship: React.FC = () => {
           <div className="bg-[#1c1c1c] rounded-[2.5rem] p-card-p shadow-[0_60px_120px_-20px_rgba(0,0,0,0.15),0_30px_60px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_80px_160px_-20px_rgba(0,0,0,0.2),0_40px_80px_-15px_rgba(0,0,0,0.15)] transition-all duration-[1000ms] ease-out transform hover:-translate-y-4 flex flex-col border border-white/5 reveal delay-200 w-full">
             <div className="flex items-center gap-4 mb-3">
               <Code className="w-8 h-8 text-zinc-400" />
-              <h3 className="font-sans font-bold text-white text-h3">
+              <h3 className="font-serif font-bold text-white text-h3">
                 AICTE Virtual Internship - Zscaler
               </h3>
             </div>

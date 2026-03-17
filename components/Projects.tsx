@@ -33,7 +33,7 @@ const Projects: React.FC = () => {
               key={idx}
               className={`bg-[#1c1c1a] rounded-sm p-10 shadow-[20px_40px_60px_-15px_rgba(0,0,0,0.3)] hover:shadow-[30px_50px_80px_-20px_rgba(0,0,0,0.4)] transition-all duration-700 ease-out transform hover:-translate-y-4 flex flex-col h-full reveal delay-${(idx + 1) * 200}`}
             >
-              <h3 className="font-sans font-bold text-white text-h3 leading-[1.2] mb-8 whitespace-pre-line">
+              <h3 className="font-serif font-bold text-white text-h3 leading-[1.2] mb-8 whitespace-pre-line">
                 {project.title}
               </h3>
               <p className="font-sans text-zinc-300 mb-12 leading-relaxed text-paragraph flex-grow">
