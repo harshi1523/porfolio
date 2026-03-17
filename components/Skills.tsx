@@ -5,33 +5,30 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from './ScrollReveal';
 const Skills: React.FC = () => {
   const skillCategories = [
     {
-      title: "Core Programming",
+      title: "Programming Languages",
       icon: <Terminal className="w-6 h-6" />,
-      skills: ["Python", "Java", "C", "Data Structures", "Algorithms"],
+      skills: ["Java", "Python", "C", "MySQL", "HTML"],
       color: "accent"
     },
     {
-      title: "Artificial Intelligence",
-      icon: <Brain className="w-6 h-6" />,
-      skills: ["Machine Learning", "NLP", "Deep Learning", "GenAI", "Prompt Engineering"],
-      color: "highlight"
-    },
-    {
-      title: "Data Science",
-      icon: <Database className="w-6 h-6" />,
-      skills: ["SQL", "Data Analytics", "Pandas", "NumPy", "Matplotlib"],
-      color: "accent"
-    },
-    {
-      title: "Web Technologies",
-      icon: <Globe className="w-6 h-6" />,
-      skills: ["HTML", "CSS", "Firebase", "Basic React"],
-      color: "highlight"
-    },
-    {
-      title: "Tools & OS",
+      title: "Tools",
       icon: <Cpu className="w-6 h-6" />,
-      skills: ["Git", "Windows", "VS Code", "Jupyter Notebook"],
+      skills: ["JIRA", "AI Studio", "Antigravity", "Firebase", "GitHub", "Lovable AI"],
+      color: "highlight"
+    },
+    {
+      title: "Technical Skills",
+      icon: <Brain className="w-6 h-6" />,
+      skills: [
+        "Artificial intelligence", 
+        "Machine Learning", 
+        "Natural Language Processing", 
+        "Prompt engineering", 
+        "TensorFlow", 
+        "PyTorch", 
+        "Scikit-learn", 
+        "Pandas"
+      ],
       color: "accent"
     }
   ];
