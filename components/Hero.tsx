@@ -83,10 +83,14 @@ const Hero: React.FC = () => {
             variants={itemVariants}
             className="flex flex-wrap gap-8 items-center"
           >
-            <button className="bg-accent hover:bg-accent/90 text-white px-12 py-5 font-sans text-button uppercase transition-all flex items-center gap-3 shadow-[0_0_30px_rgba(255,46,99,0.3)] hover:shadow-[0_0_40px_rgba(255,46,99,0.5)] hover:-translate-y-1">
+            <a 
+              href="/CV.pdf" 
+              download 
+              className="bg-accent hover:bg-accent/90 text-white px-12 py-5 font-sans text-button uppercase transition-all flex items-center gap-3 shadow-[0_0_30px_rgba(255,46,99,0.3)] hover:shadow-[0_0_40px_rgba(255,46,99,0.5)] hover:-translate-y-1"
+            >
               <Download className="w-5 h-5" />
               Download CV
-            </button>
+            </a>
             <a 
               href="#contact" 
               className="group relative border border-border text-textPrimary hover:border-accent hover:text-accent px-12 py-5 font-sans text-button uppercase transition-all flex items-center gap-3 hover:-translate-y-1 bg-secondary/50 backdrop-blur-sm"
