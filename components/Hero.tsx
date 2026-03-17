@@ -109,7 +109,7 @@ const Hero: React.FC = () => {
         <div className="flex gap-12 text-textSecondary pointer-events-auto">
           {[
             { name: 'LinkedIn', url: 'https://www.linkedin.com/in/lakshmi-harshitha-' },
-            { name: 'GitHub', url: 'https://github.com/lakshmiharshithaperavali' }
+            { name: 'GitHub', url: 'https://github.com/harshi1523' }
           ].map((social) => (
             <a 
               key={social.name} 

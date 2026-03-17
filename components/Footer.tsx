@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
                   <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 </a>
                 <a 
-                  href="https://github.com/lakshmiharshithaperavali" 
+                  href="https://github.com/harshi1523" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-secondary border border-border rounded-xl flex items-center justify-center text-textPrimary hover:border-highlight hover:bg-highlight/10 transition-all cursor-pointer group"

@@ -13,7 +13,7 @@ const ContactBar: React.FC = () => {
             <span>peravalilakshmiharshitha@gmail.com</span>
           </div>
           <a 
-            href="https://github.com/lakshmiharshithaperavali" 
+            href="https://github.com/harshi1523" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="flex items-center gap-3 group transition-all hover:text-highlight"
