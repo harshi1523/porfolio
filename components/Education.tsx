@@ -6,25 +6,22 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from './ScrollReveal';
 const Education: React.FC = () => {
   const education = [
     {
-      degree: "B.Tech in Artificial Intelligence and Machine Learning",
-      institution: "Vellore Institute of Technology, Chennai",
-      period: "2021 — 2025",
-      details: "Pursuing specialized coursework in Advanced AI, Neural Networks, and Data Structures.",
-      grade: "CGPA: 8.64"
+      degree: "Bachelor of Technology in CSE (AI & ML)",
+      institution: "RVR & JC College of Engineering",
+      period: "2022 — 2026",
+      details: "Specializing in Computer Science with a focus on Artificial Intelligence and Machine Learning paradigms."
     },
     {
       degree: "Intermediate Education (MPC)",
       institution: "Sri Chaitanya Junior College",
-      period: "2019 — 2021",
-      details: "Focused on Mathematics, Physics, and Chemistry.",
-      grade: "Percentage: 97.4%"
+      period: "2020 — 2022",
+      details: "Completed higher secondary education with a focus on Mathematics, Physics, and Chemistry."
     },
     {
-      degree: "Secondary School Certificate",
-      institution: "Ravindra Bharathi School",
-      period: "2018 — 2019",
-      details: "Completed with outstanding academic performance.",
-      grade: "CGPA: 10.0"
+      degree: "Secondary School Certificate (10th)",
+      institution: "Naveena Vidya Nikethan High School",
+      period: "2019 — 2020",
+      details: "Foundational schooling with a consistent record of academic excellence."
     }
   ];
 
@@ -63,13 +60,9 @@ const Education: React.FC = () => {
                   {item.institution}
                 </div>
                 
-                <p className="text-textSecondary text-sm leading-relaxed mb-6 font-sans">
+                <p className="text-textSecondary text-sm leading-relaxed font-sans">
                   {item.details}
                 </p>
-                
-                <div className="inline-flex items-center gap-2 text-textPrimary font-bold text-sm bg-border/50 px-4 py-2 rounded-lg border border-border">
-                  <span className="text-accent italic font-bodoni text-lg mr-1">Res:</span> {item.grade}
-                </div>
               </div>
             </StaggerItem>
           ))}
