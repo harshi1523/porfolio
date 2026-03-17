@@ -19,12 +19,22 @@ const Footer: React.FC = () => {
                 Building the future through <span className="text-highlight">Artificial Intelligence</span> & Intelligent Systems.
               </p>
               <div className="flex gap-4">
-                <div className="w-12 h-12 bg-secondary border border-border rounded-xl flex items-center justify-center text-accent hover:border-accent hover:bg-accent/10 transition-all cursor-pointer group">
+                <a 
+                  href="https://www.linkedin.com/in/lakshmi-harshitha-" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-secondary border border-border rounded-xl flex items-center justify-center text-accent hover:border-accent hover:bg-accent/10 transition-all cursor-pointer group"
+                >
                   <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                </div>
-                <div className="w-12 h-12 bg-secondary border border-border rounded-xl flex items-center justify-center text-textPrimary hover:border-highlight hover:bg-highlight/10 transition-all cursor-pointer group">
+                </a>
+                <a 
+                  href="https://github.com/lakshmiharshithaperavali" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-secondary border border-border rounded-xl flex items-center justify-center text-textPrimary hover:border-highlight hover:bg-highlight/10 transition-all cursor-pointer group"
+                >
                   <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                </div>
+                </a>
               </div>
             </div>
             
