@@ -39,12 +39,6 @@ const Footer: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              <div>
-                <h3 className="font-sans font-bold text-textPrimary text-xs uppercase tracking-[0.3em] mb-8">Contact</h3>
-                <ul className="space-y-4">
-                  <li><a href="mailto:peravalilakshmiharshitha@gmail.com" className="text-textSecondary hover:text-highlight transition-colors text-[11px] font-medium">peravalilakshmiharshitha@gmail.com</a></li>
-                </ul>
-              </div>
             </div>
           </div>
           
