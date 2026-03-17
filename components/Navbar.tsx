@@ -12,12 +12,12 @@ const Navbar: React.FC = () => {
     { name: 'Contact', href: '#contact' }
   ];
 
-  const desktopLinkClass = "text-white text-xs font-bold tracking-[0.2em] hover:text-midnight transition-all duration-300 relative group py-2";
+  const desktopLinkClass = "text-white text-nav font-sans tracking-[0.2em] hover:text-midnight transition-all duration-300 relative group py-2";
   const mobileLinkClass = "text-white text-3xl font-serif font-bold tracking-widest hover:text-midnight transition-colors py-4";
 
   return (
     <nav className="sticky top-0 z-[100] bg-apres py-5 px-6 md:px-12 flex justify-between items-center border-b border-white/10 shadow-lg">
-      <div className="font-serif text-2xl md:text-3xl font-extrabold text-white tracking-tight z-[110]">
+      <div className="font-serif text-h3 md:text-h2 font-extrabold text-white tracking-tight z-[110]">
         <a href="#home" className="hover:text-midnight transition-colors">LAKSHMI HARSHITHA</a>
       </div>
 

@@ -21,11 +21,11 @@ const Education: React.FC = () => {
   ];
 
   return (
-    <section id="education" className="pt-12 pb-32 px-6 md:px-12 bg-arctic overflow-hidden scroll-mt-32">
+    <section id="education" className="py-section px-6 md:px-12 bg-arctic overflow-hidden scroll-mt-32">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-24 reveal">
-          <h2 className="font-serif text-7xl md:text-8xl font-black text-midnight italic leading-none">
+          <h2 className="font-serif text-h2 text-midnight italic leading-none">
             Education
           </h2>
           <div className="w-32 h-2 bg-apres mt-6"></div>
@@ -43,13 +43,13 @@ const Education: React.FC = () => {
                   
                   {/* Content Side */}
                   <div className={`w-full md:w-1/2 reveal ${isEven ? 'md:pr-20 md:text-right' : 'md:pl-20 md:text-left'} delay-${(idx + 1) * 200}`}>
-                    <span className="font-sans font-black text-xl text-apres mb-2 block tracking-tighter">
+                    <span className="font-sans font-black text-[15px] text-apres mb-2 block tracking-tighter">
                       {edu.year}
                     </span>
-                    <h3 className="font-serif text-3xl md:text-4xl font-bold text-midnight leading-tight mb-3">
+                    <h3 className="font-serif text-h3 text-midnight leading-tight mb-3">
                       {edu.institution}
                     </h3>
-                    <p className="font-sans font-medium text-midnight/50 text-lg uppercase tracking-widest">
+                    <p className="font-sans text-small text-midnight/50 uppercase tracking-widest">
                       {edu.detail}
                     </p>
                   </div>

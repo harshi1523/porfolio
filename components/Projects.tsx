@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, Github } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const projects = [
@@ -21,33 +21,48 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="bg-[#e2e4e6] py-32 px-6 md:px-12 relative overflow-hidden scroll-mt-32">
+    <section id="projects" className="bg-[#e2e4e6] py-section px-6 md:px-12 relative overflow-hidden scroll-mt-32">
       <div className="max-w-[1400px] w-full mx-auto relative z-10">
-        <h2 className="font-serif text-[4rem] md:text-[5.5rem] font-medium text-zinc-800 mb-20 tracking-tight reveal">
+        <h2 className="font-serif text-h2 text-zinc-800 mb-20 tracking-tight reveal">
           Selected Projects
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12 w-full">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12 w-full mb-20">
           {projects.map((project, idx) => (
             <div
               key={idx}
               className={`bg-[#1c1c1a] rounded-sm p-10 shadow-[20px_40px_60px_-15px_rgba(0,0,0,0.3)] hover:shadow-[30px_50px_80px_-20px_rgba(0,0,0,0.4)] transition-all duration-700 ease-out transform hover:-translate-y-4 flex flex-col h-full reveal delay-${(idx + 1) * 200}`}
             >
-              <h3 className="font-sans font-bold text-white text-[1.75rem] leading-[1.2] mb-8 whitespace-pre-line">
+              <h3 className="font-sans font-bold text-white text-h3 leading-[1.2] mb-8 whitespace-pre-line">
                 {project.title}
               </h3>
-              <p className="font-sans text-zinc-300 mb-12 leading-relaxed text-[15px] flex-grow">
+              <p className="font-sans text-zinc-300 mb-12 leading-relaxed text-paragraph flex-grow">
                 {project.desc}
               </p>
               <div className="flex flex-wrap gap-2.5 mt-auto">
                 {project.tech.map((t, i) => (
-                  <span key={i} className="text-[13px] font-medium text-zinc-300 bg-white/5 px-4 py-1.5 rounded-full">
+                  <span key={i} className="text-pill text-zinc-300 bg-white/5 px-4 py-1.5 rounded-full">
                     {t}
                   </span>
                 ))}
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center reveal delay-800">
+          <a 
+            href="https://github.com/harshi1523?tab=repositories" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center gap-4 bg-[#1c1c1a] hover:bg-zinc-800 text-white px-12 py-5 font-sans text-button uppercase transition-all overflow-hidden"
+          >
+            <span className="relative z-10 flex items-center gap-3">
+              <Github className="w-5 h-5" />
+              More on GitHub
+            </span>
+            <div className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+          </a>
         </div>
       </div>
     </section>

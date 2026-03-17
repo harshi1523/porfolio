@@ -22,26 +22,26 @@ const Internship: React.FC = () => {
   ];
 
   return (
-    <section id="internship" className="py-32 px-6 md:px-12 bg-[#e5e7eb] scroll-mt-32">
+    <section id="internship" className="py-section px-6 md:px-12 bg-[#e5e7eb] scroll-mt-32">
       <div className="max-w-[1400px] w-full mx-auto relative z-10">
-        <h2 className="font-serif text-[4rem] md:text-[5.5rem] font-medium text-zinc-800 mb-20 tracking-tight reveal">
+        <h2 className="font-serif text-h2 text-zinc-800 mb-20 tracking-tight reveal">
           Professional Experience
         </h2>
         
         <div className="w-full space-y-12">
           {/* AdeptSK Solutions */}
-          <div className="bg-[#1c1c1c] rounded-[2.5rem] p-10 md:p-14 shadow-[0_60px_120px_-20px_rgba(0,0,0,0.15),0_30px_60px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_80px_160px_-20px_rgba(0,0,0,0.2),0_40px_80px_-15px_rgba(0,0,0,0.15)] transition-all duration-[1000ms] ease-out transform hover:-translate-y-4 flex flex-col border border-white/5 reveal w-full">
+          <div className="bg-[#1c1c1c] rounded-[2.5rem] p-card-p shadow-[0_60px_120px_-20px_rgba(0,0,0,0.15),0_30px_60px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_80px_160px_-20px_rgba(0,0,0,0.2),0_40px_80px_-15px_rgba(0,0,0,0.15)] transition-all duration-[1000ms] ease-out transform hover:-translate-y-4 flex flex-col border border-white/5 reveal w-full">
             <div className="flex items-center gap-4 mb-3">
               <Briefcase className="w-8 h-8 text-zinc-400" />
-              <h3 className="font-sans font-bold text-white text-3xl">
+              <h3 className="font-sans font-bold text-white text-h3">
                 AdeptSK Solutions Private Ltd
               </h3>
             </div>
-            <h4 className="font-sans font-medium text-zinc-400 text-xl tracking-wide mb-8">
+            <h4 className="font-sans text-zinc-400 text-small tracking-wide mb-8">
               Software Engineer Intern
             </h4>
             
-            <p className="font-sans text-zinc-300 mb-10 leading-relaxed text-lg">
+            <p className="font-sans text-zinc-300 mb-10 leading-relaxed text-paragraph">
               Currently working as a Software Engineer Intern at AdeptSK Solutions, contributing to the development of end-to-end software solutions. I focus on implementing project features, collaborating with teams, and applying modern development practices to deliver scalable and efficient applications.
             </p>
 
@@ -60,24 +60,24 @@ const Internship: React.FC = () => {
               </div>
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="w-6 h-6 text-zinc-500 shrink-0 mt-0.5" />
-                <span className="font-sans text-zinc-300 leading-relaxed">Applied modern development workflows and project management practices</span>
+                <span className="font-sans text-zinc-300 leading-relaxed text-paragraph">Applied modern development workflows and project management practices</span>
               </div>
             </div>
           </div>
 
           {/* AICTE Zscaler Virtual Internship */}
-          <div className="bg-[#1c1c1c] rounded-[2.5rem] p-10 md:p-14 shadow-[0_60px_120px_-20px_rgba(0,0,0,0.15),0_30px_60px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_80px_160px_-20px_rgba(0,0,0,0.2),0_40px_80px_-15px_rgba(0,0,0,0.15)] transition-all duration-[1000ms] ease-out transform hover:-translate-y-4 flex flex-col border border-white/5 reveal delay-200 w-full">
+          <div className="bg-[#1c1c1c] rounded-[2.5rem] p-card-p shadow-[0_60px_120px_-20px_rgba(0,0,0,0.15),0_30px_60px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_80px_160px_-20px_rgba(0,0,0,0.2),0_40px_80px_-15px_rgba(0,0,0,0.15)] transition-all duration-[1000ms] ease-out transform hover:-translate-y-4 flex flex-col border border-white/5 reveal delay-200 w-full">
             <div className="flex items-center gap-4 mb-3">
               <Code className="w-8 h-8 text-zinc-400" />
-              <h3 className="font-sans font-bold text-white text-3xl">
+              <h3 className="font-sans font-bold text-white text-h3">
                 AICTE Virtual Internship - Zscaler
               </h3>
             </div>
-            <h4 className="font-sans font-medium text-zinc-400 text-xl tracking-wide mb-8">
+            <h4 className="font-sans text-zinc-400 text-small tracking-wide mb-8">
               Cloud Security Intern (Zero Trust Architecture)
             </h4>
             
-            <p className="font-sans text-zinc-300 mb-10 leading-relaxed text-lg">
+            <p className="font-sans text-zinc-300 mb-10 leading-relaxed text-paragraph">
               Completed an intensive virtual internship focusing on modern cloud security paradigms. Gained hands-on experience analyzing real-world access risks and studying the enforcement of secure, identity-based models within enterprise environments.
             </p>
 
@@ -85,7 +85,7 @@ const Internship: React.FC = () => {
               <h5 className="font-sans font-bold text-white text-lg mb-4">Key Competencies</h5>
               <div className="flex flex-wrap gap-3 border-t border-white/10 pt-6">
                 {["Zero Trust Architecture", "Cloud Security", "Policy Enforcement", "Threat Mitigation"].map((skill, i) => (
-                  <span key={i} className="text-sm font-medium tracking-wide text-zinc-400 bg-white/5 px-5 py-2 rounded-full border border-white/5">
+                  <span key={i} className="text-pill tracking-wide text-zinc-400 bg-white/5 px-5 py-2 rounded-full border border-white/5">
                     {skill}
                   </span>
                 ))}
@@ -103,7 +103,7 @@ const Internship: React.FC = () => {
               </div>
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="w-6 h-6 text-zinc-500 shrink-0 mt-0.5" />
-                <span className="font-sans text-zinc-300 leading-relaxed">Strengthened understanding of secure cloud access models and enterprise security practices</span>
+                <span className="font-sans text-zinc-300 leading-relaxed text-paragraph">Strengthened understanding of secure cloud access models and enterprise security practices</span>
               </div>
             </div>
           </div>

@@ -29,9 +29,9 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="py-32 px-6 md:px-12 bg-[#F8F9FA] scroll-mt-32">
+    <section id="skills" className="py-section px-6 md:px-12 bg-[#F8F9FA] scroll-mt-32">
       <div className="max-w-[1400px] w-full mx-auto relative z-10">
-        <h2 className="font-serif text-[4rem] md:text-[5.5rem] font-medium text-midnight mb-20 tracking-tight">
+        <h2 className="font-serif text-h2 text-midnight mb-20 tracking-tight">
           Technical Skills
         </h2>
 
@@ -40,7 +40,7 @@ const Skills: React.FC = () => {
             <div key={idx} className={`relative reveal delay-${(idx + 1) * 100}`}>
               <div className="flex items-center gap-3 mb-10 text-zinc-400">
                 {cat.icon}
-                <h3 className="font-sans font-bold text-[13px] tracking-[0.2em] uppercase">
+                <h3 className="font-sans font-bold text-small tracking-[0.2em] uppercase">
                   {cat.title}
                 </h3>
               </div>
@@ -49,7 +49,7 @@ const Skills: React.FC = () => {
                 {cat.skills.map((skill, sIdx) => (
                   <span 
                     key={sIdx} 
-                    className="px-4 py-2 bg-[#1A1A1A] border border-[#333333] text-zinc-300 font-sans text-sm font-medium rounded-[50px] transition-all duration-300 cursor-default hover:border-purple-500/50 hover:bg-[#252525] hover:shadow-[0_0_15px_rgba(168,85,247,0.15)] hover:-translate-y-0.5"
+                    className="px-4 py-2 bg-[#1A1A1A] border border-[#333333] text-zinc-300 font-sans text-pill rounded-[50px] transition-all duration-300 cursor-default hover:border-purple-500/50 hover:bg-[#252525] hover:shadow-[0_0_15px_rgba(168,85,247,0.15)] hover:-translate-y-0.5"
                   >
                     {skill}
                   </span>

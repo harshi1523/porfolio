@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="relative bg-arctic pt-32 pb-48 px-6 md:px-12 overflow-hidden scroll-mt-32">
+    <section id="home" className="relative bg-arctic pt-section pb-[120px] px-6 md:px-12 overflow-hidden scroll-mt-32">
       {/* Background Decorative Outlined Text with Parallax */}
       <div 
         ref={parallaxRef}
@@ -31,21 +31,21 @@ const Hero: React.FC = () => {
       </div>
       
       <div className="max-w-6xl mx-auto relative z-10">
-        <p className="text-midnight font-sans text-lg md:text-xl mb-4 tracking-wide opacity-90 reveal">
+        <p className="text-midnight font-sans text-paragraph mb-4 tracking-wide opacity-90 reveal">
           Hello, My name is
         </p>
-        <h1 className="font-serif text-6xl md:text-9xl font-extrabold text-midnight leading-none tracking-tighter mb-8 reveal delay-100">
+        <h1 className="font-serif text-h2 md:text-h1 text-midnight leading-none tracking-tighter mb-8 reveal delay-100">
           LAKSHMI <br /> HARSHITHA
         </h1>
-        <p className="text-midnight font-sans text-xl md:text-2xl mb-12 max-w-2xl font-light tracking-wide opacity-80 leading-relaxed reveal delay-200">
+        <p className="text-midnight font-sans text-paragraph md:text-[20px] mb-12 max-w-2xl font-light tracking-wide opacity-80 leading-relaxed reveal delay-200">
           AI & Machine Learning Undergraduate | <span className="font-medium">NLP & GenAI Enthusiast</span>
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 reveal delay-300">
-          <button className="bg-mountain hover:bg-apres text-white px-10 py-4 font-sans font-bold text-sm tracking-widest uppercase transition-all transform hover:-translate-y-1 shadow-lg">
+          <button className="bg-mountain hover:bg-apres text-white px-10 py-4 font-sans text-button uppercase transition-all transform hover:-translate-y-1 shadow-lg">
             Download CV
           </button>
-          <a href="#contact" className="border-2 border-midnight text-midnight hover:bg-apres hover:border-apres hover:text-white px-10 py-4 font-sans font-bold text-sm tracking-widest uppercase transition-all transform hover:-translate-y-1 text-center">
+          <a href="#contact" className="border-2 border-midnight text-midnight hover:bg-apres hover:border-apres hover:text-white px-10 py-4 font-sans text-button uppercase transition-all transform hover:-translate-y-1 text-center">
             Let's Talk
           </a>
         </div>

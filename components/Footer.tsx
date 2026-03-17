@@ -7,8 +7,8 @@ const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto reveal">
         <div className="grid md:grid-cols-2 gap-12 border-b border-white/10 pb-16 mb-12">
           <div>
-            <h2 className="font-serif text-4xl font-bold mb-4 tracking-tight uppercase">Lakshmi Harshitha</h2>
-            <p className="font-sans font-light text-white/60 max-w-sm text-lg leading-relaxed">
+            <h2 className="font-serif text-h2 mb-4 tracking-tight uppercase">Lakshmi Harshitha</h2>
+            <p className="font-sans font-light text-white/60 max-w-sm text-paragraph leading-relaxed">
               AI & Machine Learning Undergraduate | Building Intelligent Solutions that bridge innovation and practicality.
             </p>
           </div>
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               <div className="flex md:justify-end gap-6">
                 <a href="#" className="hover:text-apres text-2xl transition-colors">𝕏</a>
                 <a href="#" className="hover:text-apres text-2xl transition-colors">in</a>
-                <a href="#" className="hover:text-apres text-2xl transition-colors">gh</a>
+                <a href="https://github.com/harshi1523?tab=repositories" target="_blank" rel="noopener noreferrer" className="hover:text-apres text-2xl transition-colors">gh</a>
               </div>
             </div>
           </div>
