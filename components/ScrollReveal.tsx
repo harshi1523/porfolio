@@ -38,7 +38,7 @@ export const ScrollReveal = ({
       }}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-5% 0px" }}
+      viewport={{ once: false, amount: 0.2 }}
       style={{ position: 'relative', width: '100%', ...style }}
       {...props}
     >
@@ -69,7 +69,7 @@ export const StaggerContainer = ({
       }}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-5% 0px" }}
+      viewport={{ once: false, amount: 0.2 }}
       {...props}
     >
       {children}
