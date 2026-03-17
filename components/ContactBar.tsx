@@ -1,29 +1,41 @@
 
 import React from 'react';
+import { ScrollReveal } from './ScrollReveal';
+import { Phone, Mail, Github, Linkedin } from 'lucide-react';
 
 const ContactBar: React.FC = () => {
   return (
-    <div className="bg-arctic border-y border-midnight/5 py-4 px-6 md:px-12 reveal">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center gap-4 md:gap-12 text-small font-sans text-midnight/80">
-        <div className="flex items-center gap-2">
-          <span className="text-apres">📞</span> +91 9392959397
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-apres">📧</span> peravalilakshmiharshitha@gmail.com
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-apres">🔗</span> 
-          <a href="https://github.com/harshi1523?tab=repositories" target="_blank" rel="noopener noreferrer" className="hover:text-apres transition-colors">
-            GitHub
+    <div className="bg-secondary border-y border-border py-4 px-6 md:px-12 relative z-20">
+      <ScrollReveal>
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-6 md:gap-16 text-[13px] font-sans text-textSecondary uppercase tracking-widest font-bold">
+          <div className="flex items-center gap-3 group transition-colors hover:text-textPrimary">
+            <Phone className="w-4 h-4 text-accent" />
+            <span>+91 9392959397</span>
+          </div>
+          <div className="flex items-center gap-3 group transition-colors hover:text-textPrimary">
+            <Mail className="w-4 h-4 text-accent" />
+            <span>peravalilakshmiharshitha@gmail.com</span>
+          </div>
+          <a 
+            href="https://github.com/harshi1523?tab=repositories" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-3 group transition-all hover:text-highlight"
+          >
+            <Github className="w-4 h-4 text-accent group-hover:text-highlight" />
+            <span>GitHub</span>
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/lakshmi-harshitha-" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-3 group transition-all hover:text-highlight"
+          >
+            <Linkedin className="w-4 h-4 text-accent group-hover:text-highlight" />
+            <span>LinkedIn</span>
           </a>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="text-apres">💼</span> 
-          <a href="https://www.linkedin.com/in/lakshmi-harshitha-" target="_blank" rel="noopener noreferrer" className="hover:text-apres transition-colors">
-            LinkedIn
-          </a>
-        </div>
-      </div>
+      </ScrollReveal>
     </div>
   );
 };

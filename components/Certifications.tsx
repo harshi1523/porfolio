@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Award } from 'lucide-react';
 import { ScrollReveal, StaggerContainer, StaggerItem } from './ScrollReveal';
 
 const Certifications: React.FC = () => {
@@ -11,10 +12,15 @@ const Certifications: React.FC = () => {
   ];
 
   return (
-    <section className="py-section px-6 md:px-12 bg-slopes overflow-hidden">
+    <section id="certifications" className="py-section px-6 md:px-12 bg-secondary scroll-mt-32 relative">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-midnight mb-20 tracking-tight">Certifications</h2>
+          <div className="flex items-center gap-4 mb-16">
+            <div className="p-3 bg-highlight/10 rounded-xl border border-highlight/20 text-highlight">
+              <Award className="w-6 h-6" />
+            </div>
+            <h2 className="font-bodoni text-h2 text-textPrimary uppercase tracking-tight">Professional <span className="text-highlight">Certifications</span></h2>
+          </div>
         </ScrollReveal>
         
         <StaggerContainer>
@@ -22,10 +28,10 @@ const Certifications: React.FC = () => {
             {certs.map((cert, idx) => (
               <StaggerItem key={idx}>
                 <div 
-                  className="bg-mountain p-card-p border border-midnight/10 hover:border-apres transition-all group"
+                  className="bg-card p-8 border border-border rounded-2xl accent-glow group transition-all duration-300 hover:bg-hover hover:-translate-y-1"
                 >
-                  <p className="text-apres text-small uppercase tracking-widest mb-4">{cert.issuer}</p>
-                  <h3 className="font-sans text-white text-h3 leading-tight group-hover:text-white/80">
+                  <p className="text-highlight text-[10px] uppercase font-bold tracking-[0.2em] mb-4 bg-highlight/5 px-3 py-1 rounded inline-block border border-highlight/10">{cert.issuer}</p>
+                  <h3 className="font-bodoni text-2xl text-textPrimary leading-tight group-hover:text-accent transition-colors">
                     {cert.name}
                   </h3>
                 </div>

@@ -1,45 +1,61 @@
 
 import React from 'react';
+import { Github, Linkedin } from 'lucide-react';
+import { ScrollReveal } from './ScrollReveal';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-midnight pt-24 pb-12 px-6 md:px-12 text-white">
-      <div className="max-w-6xl mx-auto reveal">
-        <div className="grid md:grid-cols-2 gap-12 border-b border-white/10 pb-16 mb-12">
-          <div>
-            <h2 className="font-serif text-h2 mb-4 tracking-tight uppercase">Lakshmi Harshitha</h2>
-            <p className="font-sans font-light text-white/60 max-w-sm text-paragraph leading-relaxed">
-              AI & Machine Learning Undergraduate | Building Intelligent Solutions that bridge innovation and practicality.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-8 md:text-right">
+    <footer className="bg-primary py-24 px-6 md:px-12 text-textSecondary border-t border-border relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-highlight/5 blur-[120px] rounded-full pointer-events-none" />
+      
+      <div className="max-w-6xl mx-auto relative z-10">
+        <ScrollReveal>
+          <div className="grid md:grid-cols-[1.5fr_1fr] gap-12 border-b border-border pb-16 mb-12">
             <div>
-              <h3 className="font-sans font-bold text-apres text-xs uppercase tracking-widest mb-6">Explore</h3>
-              <ul className="space-y-3">
-                {['Home', 'Projects', 'Internship', 'Contact'].map(item => (
-                  <li key={item}>
-                    <a href={`#${item.toLowerCase()}`} className="hover:text-apres transition-colors">{item}</a>
-                  </li>
-                ))}
-              </ul>
+              <h2 className="font-bodoni text-[3rem] text-textPrimary mb-6 tracking-tight uppercase leading-none">
+                Lakshmi <span className="text-accent italic font-light lowercase">Harshitha</span>
+              </h2>
+              <p className="font-sans text-textSecondary max-w-sm text-lg leading-relaxed mb-8">
+                Building the future through <span className="text-highlight">Artificial Intelligence</span> & Intelligent Systems.
+              </p>
+              <div className="flex gap-4">
+                <div className="w-12 h-12 bg-secondary border border-border rounded-xl flex items-center justify-center text-accent hover:border-accent hover:bg-accent/10 transition-all cursor-pointer group">
+                  <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                </div>
+                <div className="w-12 h-12 bg-secondary border border-border rounded-xl flex items-center justify-center text-textPrimary hover:border-highlight hover:bg-highlight/10 transition-all cursor-pointer group">
+                  <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                </div>
+              </div>
             </div>
-            <div>
-              <h3 className="font-sans font-bold text-apres text-xs uppercase tracking-widest mb-6">Connect</h3>
-              <div className="flex md:justify-end gap-6">
-                <a href="https://www.linkedin.com/in/lakshmi-harshitha-" target="_blank" rel="noopener noreferrer" className="hover:text-apres text-2xl transition-colors">in</a>
-                <a href="https://github.com/harshi1523?tab=repositories" target="_blank" rel="noopener noreferrer" className="hover:text-apres text-2xl transition-colors">gh</a>
+            
+            <div className="grid grid-cols-2 gap-8 md:text-right">
+              <div>
+                <h3 className="font-sans font-bold text-textPrimary text-xs uppercase tracking-[0.3em] mb-8">Navigation</h3>
+                <ul className="space-y-4">
+                  {['Home', 'About', 'Work', 'Skills', 'Contact'].map(item => (
+                    <li key={item}>
+                      <a href={`#${item.toLowerCase()}`} className="text-textSecondary hover:text-accent transition-colors text-sm font-medium uppercase tracking-widest">{item}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-sans font-bold text-textPrimary text-xs uppercase tracking-[0.3em] mb-8">Contact</h3>
+                <ul className="space-y-4">
+                  <li><a href="mailto:peravalilakshmiharshitha@gmail.com" className="text-textSecondary hover:text-highlight transition-colors text-sm break-all font-medium">Email Me</a></li>
+                  <li><a href="tel:+919392959397" className="text-textSecondary hover:text-highlight transition-colors text-sm font-medium">WhatsApp</a></li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-        
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm font-sans text-white/40 gap-4">
-          <p>© 2026 Lakshmi Harshitha. All rights reserved.</p>
-          <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          
+          <div className="flex flex-col md:flex-row justify-between items-center text-[10px] font-sans font-bold uppercase tracking-[0.4em] text-textMuted gap-8">
+            <p>© 2026 LAKSHMI HARSHITHA. DESIGNED FOR EXCELLENCE.</p>
+            <div className="flex gap-10">
+              <a href="#" className="hover:text-accent transition-colors">BACK TO TOP ↑</a>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </footer>
   );

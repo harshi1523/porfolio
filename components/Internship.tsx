@@ -5,99 +5,100 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from './ScrollReveal';
 
 const Internship: React.FC = () => {
   return (
-    <section id="internship" className="py-section px-6 md:px-12 bg-[#e5e7eb] scroll-mt-32 overflow-hidden">
-      <div className="max-w-[1400px] w-full mx-auto relative z-10">
+    <section id="internship" className="py-section px-6 md:px-12 bg-primary scroll-mt-32 overflow-hidden relative">
+      <div className="absolute bottom-0 right-0 w-[50vw] h-[50vw] bg-accent/5 rounded-full blur-[150px] pointer-events-none" />
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <ScrollReveal>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-zinc-800 mb-20 tracking-tight">
-            Professional Experience
-          </h2>
+          <div className="flex items-center gap-4 mb-16">
+            <div className="p-3 bg-accent/10 rounded-xl border border-accent/20 text-accent">
+              <Briefcase className="w-6 h-6" />
+            </div>
+            <h2 className="font-bodoni text-h2 text-textPrimary uppercase tracking-tight">Professional <span className="text-accent">Experience</span></h2>
+          </div>
         </ScrollReveal>
         
-        <StaggerContainer>
-          <div className="w-full space-y-12">
-            {/* AdeptSK Solutions */}
-            <StaggerItem>
-              <div className="bg-[#1c1c1c] rounded-[2.5rem] p-card-p shadow-[0_60px_120px_-20px_rgba(0,0,0,0.15),0_30px_60px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_80px_160px_-20px_rgba(0,0,0,0.2),0_40px_80px_-15px_rgba(0,0,0,0.15)] transition-all duration-[1000ms] ease-out transform hover:-translate-y-4 flex flex-col border border-white/5 w-full">
-                <div className="flex items-center gap-4 mb-3">
-                  <Briefcase className="w-8 h-8 text-zinc-400" />
-                  <h3 className="font-sans font-bold text-white text-h3">
-                    AdeptSK Solutions Private Ltd
-                  </h3>
+        <StaggerContainer className="space-y-12">
+          {/* AdeptSK Solutions */}
+          <StaggerItem>
+            <div className="bg-card border border-border p-10 rounded-3xl accent-glow group transition-all duration-500 hover:bg-hover hover:-translate-y-2 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 -rotate-45 translate-x-16 -translate-y-16" />
+              
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="font-bodoni text-3xl text-textPrimary uppercase tracking-tight">AdeptSK Solutions <span className="text-accent underline decoration-accent/30 underline-offset-8">Private Ltd</span></h3>
+                  </div>
+                  <div className="inline-block px-3 py-1 bg-highlight/10 border border-highlight/20 rounded-lg text-highlight text-xs font-bold uppercase tracking-widest">
+                    Software Engineer Intern
+                  </div>
                 </div>
-                <h4 className="font-sans text-zinc-400 text-small tracking-wide mb-8">
-                  Software Engineer Intern
-                </h4>
-                
-                <p className="font-sans text-zinc-300 mb-10 leading-relaxed text-paragraph">
-                  Currently working as a Software Engineer Intern at AdeptSK Solutions, contributing to the development of end-to-end software solutions. I focus on implementing project features, collaborating with teams, and applying modern development practices to deliver scalable and efficient applications.
-                </p>
-
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-zinc-500 shrink-0 mt-0.5" />
-                    <span className="font-sans text-zinc-300 leading-relaxed">Contributed to full-stack project development</span>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-zinc-500 shrink-0 mt-0.5" />
-                    <span className="font-sans text-zinc-300 leading-relaxed">Worked on implementing features and debugging applications</span>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-zinc-500 shrink-0 mt-0.5" />
-                    <span className="font-sans text-zinc-300 leading-relaxed">Collaborated with team members to ensure smooth project delivery</span>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-zinc-500 shrink-0 mt-0.5" />
-                    <span className="font-sans text-zinc-300 leading-relaxed text-paragraph">Applied modern development workflows and project management practices</span>
-                  </div>
+                <div className="text-textMuted font-sans text-xs font-bold uppercase tracking-[0.2em] bg-secondary px-4 py-2 rounded-xl border border-border">
+                  Aug 2024 — Present
                 </div>
               </div>
-            </StaggerItem>
+              
+              <p className="font-sans text-textSecondary mb-10 leading-relaxed text-paragraph max-w-4xl">
+                Contributing to end-to-end software solutions. Implementing core project features, collaborating in agile environments, and applying modern development practices to deliver high-performance applications.
+              </p>
 
-            {/* AICTE Zscaler Virtual Internship */}
-            <StaggerItem>
-              <div className="bg-[#1c1c1c] rounded-[2.5rem] p-card-p shadow-[0_60px_120px_-20px_rgba(0,0,0,0.15),0_30px_60px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_80px_160px_-20px_rgba(0,0,0,0.2),0_40px_80px_-15px_rgba(0,0,0,0.15)] transition-all duration-[1000ms] ease-out transform hover:-translate-y-4 flex flex-col border border-white/5 w-full">
-                <div className="flex items-center gap-4 mb-3">
-                  <Code className="w-8 h-8 text-zinc-400" />
-                  <h3 className="font-sans font-bold text-white text-h3">
-                    AICTE Virtual Internship - Zscaler
-                  </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {[
+                  "Full-stack project development contributions",
+                  "Feature implementation and application debugging",
+                  "Team collaboration for seamless project delivery",
+                  "Modern development workflows & Git management"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-2xl bg-secondary/50 border border-border/50 group/item hover:border-accent/30 transition-colors">
+                    <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform" />
+                    <span className="font-sans text-textSecondary text-sm leading-relaxed group-hover/item:text-textPrimary transition-colors">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </StaggerItem>
+
+          {/* AICTE Zscaler Virtual Internship */}
+          <StaggerItem>
+            <div className="bg-card border border-border p-10 rounded-3xl accent-glow group transition-all duration-500 hover:bg-hover hover:-translate-y-2">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
+                <div>
+                  <h3 className="font-bodoni text-3xl text-textPrimary uppercase tracking-tight mb-2">AICTE Virtual Internship - <span className="text-highlight">Zscaler</span></h3>
+                  <div className="inline-block px-3 py-1 bg-accent/10 border border-accent/20 rounded-lg text-accent text-xs font-bold uppercase tracking-widest">
+                    Cloud Security Intern
+                  </div>
                 </div>
-                <h4 className="font-sans text-zinc-400 text-small tracking-wide mb-8">
-                  Cloud Security Intern (Zero Trust Architecture)
-                </h4>
-                
-                <p className="font-sans text-zinc-300 mb-10 leading-relaxed text-paragraph">
-                  Completed an intensive virtual internship focusing on modern cloud security paradigms. Gained hands-on experience analyzing real-world access risks and studying the enforcement of secure, identity-based models within enterprise environments.
-                </p>
-
-                <div className="mb-10">
-                  <h5 className="font-sans font-bold text-white text-lg mb-4">Key Competencies</h5>
-                  <div className="flex flex-wrap gap-3 border-t border-white/10 pt-6">
-                    {["Zero Trust Architecture", "Cloud Security", "Policy Enforcement", "Threat Mitigation"].map((skill, i) => (
-                      <span key={i} className="text-pill tracking-wide text-zinc-400 bg-white/5 px-5 py-2 rounded-full border border-white/5">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-zinc-500 shrink-0 mt-0.5" />
-                    <span className="font-sans text-zinc-300 leading-relaxed">Analyzed real-world cloud security scenarios</span>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-zinc-500 shrink-0 mt-0.5" />
-                    <span className="font-sans text-zinc-300 leading-relaxed">Understood access risks and policy enforcement</span>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-zinc-500 shrink-0 mt-0.5" />
-                    <span className="font-sans text-zinc-300 leading-relaxed text-paragraph">Strengthened understanding of secure cloud access models and enterprise security practices</span>
-                  </div>
+                <div className="text-textMuted font-sans text-xs font-bold uppercase tracking-[0.2em] bg-secondary px-4 py-2 rounded-xl border border-border">
+                  June 2024 — July 2024
                 </div>
               </div>
-            </StaggerItem>
-          </div>
+              
+              <p className="font-sans text-textSecondary mb-10 leading-relaxed text-paragraph max-w-4xl">
+                Intensive focus on modern cloud security paradigms. Analyzing real-world access risks and studying the enforcement of secure, identity-based Zero Trust models.
+              </p>
+
+              <div className="flex flex-wrap gap-3 mb-10">
+                {["Zero Trust Architecture", "Cloud Security", "Policy Enforcement", "Threat Mitigation"].map((skill, i) => (
+                  <span key={i} className="text-[10px] uppercase font-bold tracking-widest text-highlight border border-highlight/20 bg-highlight/5 px-4 py-1.5 rounded-lg">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+
+              <div className="space-y-4">
+                {[
+                  "Analyzed real-world cloud security scenarios",
+                  "Deep dive into Zero Trust Architecture",
+                  "Security policy evaluation and enforcement strategies"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-4 text-textSecondary">
+                    <div className="w-1.5 h-1.5 bg-accent rounded-full group-hover:scale-150 transition-transform" />
+                    <span className="font-sans text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </StaggerItem>
         </StaggerContainer>
       </div>
     </section>

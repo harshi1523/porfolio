@@ -1,72 +1,101 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Menu, X, Terminal } from 'lucide-react';
 
 const Navbar: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
-  const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Internship', href: '#internship' },
-    { name: 'Contact', href: '#contact' }
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+      
+      const sections = ['home', 'about', 'skills', 'projects', 'internship', 'contact'];
+      const scrollPosition = window.scrollY + 100;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const top = element.offsetTop;
+          const height = element.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(section);
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: 'Home', href: '#home', id: 'home' },
+    { name: 'About', href: '#about', id: 'about' },
+    { name: 'Skills', href: '#skills', id: 'skills' },
+    { name: 'Projects', href: '#projects', id: 'projects' },
+    { name: 'Experience', href: '#internship', id: 'internship' },
+    { name: 'Contact', href: '#contact', id: 'contact' },
   ];
 
-  const desktopLinkClass = "text-white text-nav font-sans tracking-[0.2em] hover:text-midnight transition-all duration-300 relative group py-2";
-  const mobileLinkClass = "text-white text-3xl font-serif font-bold tracking-widest hover:text-midnight transition-colors py-4";
-
   return (
-    <nav className="sticky top-0 z-[100] bg-apres py-5 px-6 md:px-12 flex justify-between items-center border-b border-white/10 shadow-lg">
-      <div className="font-serif text-h3 md:text-h2 font-extrabold text-white tracking-tight z-[110]">
-        <a href="#home" className="hover:text-midnight transition-colors">LAKSHMI HARSHITHA</a>
-      </div>
+    <nav className={`fixed w-full z-50 transition-all duration-300 border-b ${
+      isScrolled ? 'bg-primary/90 backdrop-blur-md py-4 border-border' : 'bg-transparent py-6 border-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+        <a href="#home" className="flex items-center gap-2 group">
+          <Terminal className="w-8 h-8 text-accent group-hover:scale-110 transition-transform" />
+          <span className="font-bodoni text-xl font-bold tracking-tighter text-textPrimary uppercase">
+            LH<span className="text-accent">.</span>DESIGN
+          </span>
+        </a>
 
-      {/* Desktop Menu */}
-      <div className="hidden md:flex space-x-10">
-        {navItems.map((item) => (
-          <a
-            key={item.name}
-            href={item.href}
-            className={desktopLinkClass}
-          >
-            {item.name.toUpperCase()}
-            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-midnight transition-all group-hover:w-full"></span>
-          </a>
-        ))}
-      </div>
+        {/* Desktop Links */}
+        <div className="hidden md:flex gap-10">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className={`font-sans text-xs uppercase tracking-widest font-bold transition-all hover:text-accent relative py-1 ${
+                activeSection === link.id ? 'text-accent neon-glow' : 'text-textSecondary'
+              }`}
+            >
+              {link.name}
+              {activeSection === link.id && (
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent"></span>
+              )}
+            </a>
+          ))}
+        </div>
 
-      {/* Mobile Menu Toggle */}
-      <div className="md:hidden z-[110]">
+        {/* Mobile Toggle */}
         <button 
+          className="md:hidden text-textPrimary"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="text-white focus:outline-none p-2"
-          aria-label="Toggle menu"
         >
-          {isMenuOpen ? (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          )}
+          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-apres transform transition-all duration-500 ease-in-out md:hidden flex flex-col items-center justify-center space-y-4 z-[105] ${isMenuOpen ? 'translate-x-0 opacity-100 visible' : 'translate-x-full opacity-0 invisible pointer-events-none'}`}>
-        {navItems.map((item) => (
-          <a
-            key={item.name}
-            href={item.href}
-            onClick={() => setIsMenuOpen(false)}
-            className={mobileLinkClass}
-          >
-            {item.name.toUpperCase()}
-          </a>
-        ))}
-      </div>
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-secondary border-b border-border py-8 px-6 animate-in slide-in-from-top duration-300">
+          <div className="flex flex-col gap-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className={`font-sans text-sm uppercase tracking-widest font-bold ${
+                  activeSection === link.id ? 'text-accent' : 'text-textSecondary'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

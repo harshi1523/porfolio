@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Award } from 'lucide-react';
 import { ScrollReveal, StaggerContainer, StaggerItem } from './ScrollReveal';
 
 const Achievements: React.FC = () => {
@@ -11,26 +12,28 @@ const Achievements: React.FC = () => {
   ];
 
   return (
-    <section className="bg-arctic py-section px-6 md:px-12 relative overflow-hidden">
+    <section id="achievements" className="bg-primary py-section px-6 md:px-12 relative overflow-hidden">
       {/* Decorative stars */}
-      <div className="absolute top-10 right-10 text-apres text-4xl animate-pulse">★</div>
-      <div className="absolute bottom-10 left-10 text-apres text-2xl opacity-50">★</div>
+      <div className="absolute top-20 right-20 text-accent/20 text-4xl animate-pulse select-none">★</div>
+      <div className="absolute bottom-20 left-20 text-accent/10 text-6xl select-none">★</div>
       
-      <div className="max-w-6xl mx-auto text-center md:text-left">
+      <div className="max-w-6xl mx-auto relative z-10">
         <ScrollReveal>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-midnight mb-16 inline-block relative">
-            Achievements & Activities
-            <span className="absolute -right-16 top-0 text-apres text-5xl">★</span>
-          </h2>
+          <div className="flex items-center gap-4 mb-16">
+            <div className="p-3 bg-accent/10 rounded-xl border border-accent/20 text-accent">
+              <Award className="w-6 h-6" />
+            </div>
+            <h2 className="font-bodoni text-h2 text-textPrimary uppercase tracking-tight">Achievements & <span className="text-accent underline decoration-accent/30 underline-offset-8">Activities</span></h2>
+          </div>
         </ScrollReveal>
         
         <StaggerContainer>
           <div className="grid md:grid-cols-2 gap-8">
             {achievements.map((item, idx) => (
               <StaggerItem key={idx}>
-                <div className="bg-mountain border border-midnight/10 p-card-p flex items-center gap-6 hover:bg-apres/10 transition-all h-full">
-                  <span className="text-4xl">{item.icon}</span>
-                  <p className="font-sans font-medium text-white text-h3 text-left">
+                <div className="bg-card border border-border p-8 rounded-2xl flex items-center gap-8 accent-glow group transition-all duration-300 hover:bg-hover hover:-translate-y-1 h-full">
+                  <span className="text-5xl group-hover:scale-110 transition-transform duration-500">{item.icon}</span>
+                  <p className="font-sans text-xl text-textPrimary leading-tight text-left group-hover:text-accent transition-colors">
                     {item.text}
                   </p>
                 </div>

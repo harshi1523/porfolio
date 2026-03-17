@@ -1,94 +1,123 @@
 
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { Download, MessageCircle, Code2, Sparkles, Cpu } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const parallaxRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current) {
-        const scrolled = window.scrollY;
-        parallaxRef.current.style.transform = `translateY(calc(-50% + ${scrolled * 0.2}px)) rotate(-90deg)`;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
+        staggerChildren: 0.15,
+        delayChildren: 0.2
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 50 },
     visible: { 
       opacity: 1, 
       y: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.9,
         ease: [0.22, 1, 0.36, 1]
       }
     }
   };
 
   return (
-    <section id="home" className="relative bg-arctic pt-section pb-[120px] px-6 md:px-12 overflow-hidden scroll-mt-32">
-      {/* Background Decorative Outlined Text with Parallax */}
-      <div 
-        ref={parallaxRef}
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 -rotate-90 select-none pointer-events-none opacity-10 will-change-transform"
-      >
-        <span className="font-serif text-[12rem] font-bold editorial-outline text-midnight whitespace-nowrap">
-          AI/ML PORTFOLIO
-        </span>
+    <section id="home" className="relative bg-primary min-h-screen pt-32 pb-40 px-6 md:px-20 overflow-hidden flex flex-col justify-center scroll-mt-32">
+      {/* Abstract Background Elements */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-accent/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-highlight/5 rounded-full blur-[120px]" />
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]" />
+      </div>
+
+      {/* Floating Technical Icons */}
+      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
+        <motion.div 
+          animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-[20%] right-[15%] text-accent/20"
+        >
+          <Code2 size={120} />
+        </motion.div>
+        <motion.div 
+          animate={{ y: [0, 20, 0], rotate: [0, -10, 0] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute bottom-[25%] left-[10%] text-highlight/10"
+        >
+          <Cpu size={140} />
+        </motion.div>
       </div>
       
       <motion.div 
-        className="max-w-6xl mx-auto relative z-10"
+        className="max-w-[1400px] w-full mx-auto relative z-10 text-left"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <motion.p 
-          variants={itemVariants}
-          className="text-midnight font-sans text-paragraph mb-4 tracking-wide opacity-90"
-        >
-          Hello, My name is
-        </motion.p>
-        <motion.h1 
-          variants={itemVariants}
-          className="font-serif text-[clamp(3.5rem,11vw,11rem)] font-bold text-midnight leading-[0.85] tracking-tighter mb-12 uppercase max-w-4xl"
-        >
-          LAKSHMI <br /> HARSHITHA
-        </motion.h1>
-        <motion.p 
-          variants={itemVariants}
-          className="text-midnight font-sans text-paragraph md:text-[20px] mb-12 max-w-2xl font-light tracking-wide opacity-80 leading-relaxed"
-        >
-          AI & Machine Learning Undergraduate | <span className="font-medium">NLP & GenAI Enthusiast</span>
-        </motion.p>
-        
-        <motion.div 
-          variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-6"
-        >
-          <button className="bg-mountain hover:bg-apres text-white px-10 py-4 font-sans text-button uppercase transition-all transform hover:-translate-y-1 shadow-lg">
-            Download CV
-          </button>
-          <a href="#contact" className="border-2 border-midnight text-midnight hover:bg-apres hover:border-apres hover:text-white px-10 py-4 font-sans text-button uppercase transition-all transform hover:-translate-y-1 text-center">
-            Let's Talk
-          </a>
-        </motion.div>
+        <div className="flex flex-col items-start gap-4">
+          <motion.div 
+            variants={itemVariants}
+            className="flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-bold uppercase tracking-widest mb-4"
+          >
+            <Sparkles className="w-3 h-3" />
+            Available for AI/ML projects
+          </motion.div>
+
+          <motion.h1 
+            variants={itemVariants}
+            className="font-bodoni text-[clamp(3.5rem,10vw,10rem)] font-bold text-textPrimary leading-[0.9] tracking-tight mb-6 uppercase text-left"
+          >
+            LAKSHMI<br />
+            <span className="text-accent neon-glow">HARSHITHA</span>
+          </motion.h1>
+          
+          <motion.p 
+            variants={itemVariants}
+            className="text-textSecondary font-sans text-[clamp(1.1rem,2vw,1.6rem)] mb-12 font-medium tracking-wide max-w-3xl leading-relaxed"
+          >
+            AI & Machine Learning Undergraduate | <span className="text-highlight">NLP & GenAI Enthusiast</span> bridging innovation and technical practicality.
+          </motion.p>
+          
+          <motion.div 
+            variants={itemVariants}
+            className="flex flex-wrap gap-8 items-center"
+          >
+            <button className="bg-accent hover:bg-accent/90 text-white px-12 py-5 font-sans text-button uppercase transition-all flex items-center gap-3 shadow-[0_0_30px_rgba(255,46,99,0.3)] hover:shadow-[0_0_40px_rgba(255,46,99,0.5)] hover:-translate-y-1">
+              <Download className="w-5 h-5" />
+              Download CV
+            </button>
+            <a 
+              href="#contact" 
+              className="group relative border border-border text-textPrimary hover:border-accent hover:text-accent px-12 py-5 font-sans text-button uppercase transition-all flex items-center gap-3 hover:-translate-y-1 bg-secondary/50 backdrop-blur-sm"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Let's Talk
+              <span className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </a>
+          </motion.div>
+        </div>
       </motion.div>
+
+      {/* Technical Bottom Bar */}
+      <div className="absolute bottom-10 left-0 w-full flex items-center justify-between px-12 md:px-24 z-20 pointer-events-none">
+        <div className="h-[1px] flex-grow bg-border/30 max-w-[100px] hidden md:block" />
+        <div className="flex gap-12 text-textSecondary pointer-events-auto">
+          {['LinkedIn', 'GitHub', 'Twitter'].map((social) => (
+            <a key={social} href="#" className="font-sans text-[10px] uppercase tracking-[0.3em] font-bold opacity-40 hover:opacity-100 hover:text-accent transition-all cursor-pointer">
+              // {social}
+            </a>
+          ))}
+        </div>
+        <div className="h-[1px] flex-grow bg-border/30 max-w-[100px] hidden md:block" />
+      </div>
     </section>
   );
 };

@@ -8,21 +8,27 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        arctic: '#D3D1CE',
-                        apres: '#6C6D74',
-                        slopes: '#B3B7BA',
-                        mountain: '#262E36',
-                        midnight: '#090F15',
                         white: '#FFFFFF',
+                        primary: '#0B0F1A',
+                        secondary: '#111827',
+                        card: '#1A1F2E',
+                        accent: '#FF2E63',
+                        highlight: '#00E5FF',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#A1A1AA',
+                        textMuted: '#6B7280',
+                        border: '#2A2F3A',
+                        hover: '#222738',
                     },
                     fontFamily: {
                         serif: ['"Playfair Display"', 'serif'],
+                        bodoni: ['"Libre Bodoni"', 'serif'],
                         sans: ['Inter', 'sans-serif'],
                     },
                     fontSize: {
@@ -46,21 +52,24 @@
     </script>
     <style>
         :root {
-            --arctic: #D3D1CE;
-            --apres: #6C6D74;
-            --slopes: #B3B7BA;
-            --mountain: #262E36;
-            --midnight: #090F15;
-            --white: #FFFFFF;
+            --primary: #0B0F1A;
+            --secondary: #111827;
+            --card: #1A1F2E;
+            --accent: #FF2E63;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A1A1AA;
+            --border: #2A2F3A;
         }
         body {
-            background-color: var(--arctic);
-            color: var(--midnight);
+            background-color: var(--primary);
+            color: var(--text-secondary);
             overflow-x: hidden;
         }
-        .editorial-outline {
-            -webkit-text-stroke: 1px currentColor;
-            color: transparent;
+        .neon-glow {
+            text-shadow: 0 0 10px rgba(255, 46, 99, 0.4);
+        }
+        .accent-glow:hover {
+            box-shadow: 0 0 20px rgba(255, 46, 99, 0.3);
         }
 
         /* Smooth scrollbar */
@@ -68,11 +77,14 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: var(--arctic);
+            background: var(--primary);
         }
         ::-webkit-scrollbar-thumb {
-            background: var(--mountain);
+            background: var(--border);
             border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
         }
     </style>
 <script type="importmap">

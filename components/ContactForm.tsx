@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
-import { ScrollReveal } from './ScrollReveal';
+import { Award, CheckCircle2 } from 'lucide-react';
+import { ScrollReveal, StaggerContainer, StaggerItem } from './ScrollReveal';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -21,89 +22,114 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-section px-6 md:px-12 bg-mountain relative scroll-mt-32 overflow-hidden">
-      <div className="max-w-6xl mx-auto">
+
+    <section id="contact" className="py-section px-6 md:px-12 bg-secondary relative scroll-mt-32 overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <ScrollReveal>
-          <h2 className="font-serif text-h2 text-white leading-none mb-4 italic">
-            Get In Touch
+          <div className="flex items-center gap-4 mb-2">
+            <div className="w-12 h-px bg-accent" />
+            <span className="text-accent text-[10px] uppercase font-bold tracking-[0.4em]">Get In Touch</span>
+          </div>
+          <h2 className="font-bodoni text-[5rem] md:text-[8rem] text-textPrimary leading-none mb-20 uppercase tracking-tighter">
+            Let's <span className="text-accent italic font-light lowercase">Collaborate</span>
           </h2>
         </ScrollReveal>
         
-        <div className="grid md:grid-cols-2 gap-24">
+        <div className="grid lg:grid-cols-[1fr_1.5fr] gap-20 items-start">
           <ScrollReveal delay={0.2}>
-            <div>
-              <h3 className="font-sans font-bold text-apres text-small tracking-widest uppercase mb-10">Contact Information</h3>
-              <div className="space-y-8 mb-12">
-                <div className="flex items-center gap-6">
-                  <div className="w-12 h-12 bg-apres flex items-center justify-center text-white rounded-full text-xl shadow-md">📞</div>
-                  <div>
-                    <p className="text-white/50 text-small uppercase tracking-wider mb-1">Call Me</p>
-                    <p className="font-sans font-bold text-white text-h3 tracking-tight">+91 9392959397</p>
+            <div className="space-y-12">
+              <div>
+                <h3 className="font-sans font-bold text-textMuted text-[10px] tracking-widest uppercase mb-10 pb-4 border-b border-border inline-block">Contact Details</h3>
+                <div className="space-y-10">
+                  <div className="group">
+                    <p className="text-textMuted text-[10px] uppercase tracking-widest mb-3">WhatsApp / Call</p>
+                    <a href="tel:+919392959397" className="font-bodoni text-4xl text-textPrimary hover:text-accent transition-colors block leading-tight">
+                      +91 93929 59397
+                    </a>
                   </div>
-                </div>
-                <div className="flex items-center gap-6">
-                  <div className="w-12 h-12 bg-apres flex items-center justify-center text-white rounded-full text-xl shadow-md">📧</div>
-                  <div>
-                    <p className="text-white/50 text-small uppercase tracking-wider mb-1">Email Me</p>
-                    <p className="font-sans font-bold text-white text-paragraph break-all tracking-tight">peravalilakshmiharshitha@gmail.com</p>
+                  <div className="group">
+                    <p className="text-textMuted text-[10px] uppercase tracking-widest mb-3">Digital Inbox</p>
+                    <a href="mailto:peravalilakshmiharshitha@gmail.com" className="font-bodoni text-3xl md:text-3xl lg:text-4xl text-textPrimary hover:text-highlight transition-colors block break-all leading-tight">
+                      peravalilakshmiharshitha<br/>@gmail.com
+                    </a>
                   </div>
                 </div>
               </div>
-              <a 
-                href="https://www.linkedin.com/in/lakshmi-harshitha-"
-                target="_blank"
-                className="inline-block bg-apres hover:bg-apres/90 text-white font-sans font-bold px-10 py-4 tracking-widest uppercase shadow-xl transition-all transform hover:-translate-y-1"
-              >
-                LinkedIn Profile
-              </a>
+              
+              <div className="p-8 bg-card border border-border rounded-3xl accent-glow">
+                <p className="text-textSecondary text-sm mb-6 leading-relaxed">
+                  Always open to discussing new projects, creative ideas, or being part of your visions.
+                </p>
+                <a 
+                  href="https://www.linkedin.com/in/lakshmi-harshitha-"
+                  target="_blank"
+                  className="w-full py-4 bg-transparent border border-accent text-accent hover:bg-accent hover:text-white font-sans text-xs font-bold uppercase tracking-widest rounded-xl transition-all text-center block"
+                >
+                  Connect on LinkedIn
+                </a>
+              </div>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.4}>
-            <div>
-              <h3 className="font-sans font-bold text-white text-sm tracking-widest uppercase mb-10">Quick Message</h3>
+            <div className="bg-card border border-border p-10 md:p-14 rounded-[2rem] accent-glow-strong relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-accent/5 blur-3xl rounded-full" />
+              
+              <h3 className="font-bodoni text-3xl text-textPrimary uppercase mb-10">Quick <span className="text-accent">Message</span></h3>
+              
               {submitted ? (
-                <div className="bg-apres/10 border border-apres p-8 text-apres font-sans font-bold text-center">
-                  <p className="text-2xl mb-2">✓</p>
-                  <p>Thank you! Your message has been sent successfully.</p>
+                <div className="py-20 text-center animate-in fade-in zoom-in duration-500">
+                  <div className="w-20 h-20 bg-accent/10 text-accent rounded-full flex items-center justify-center mx-auto mb-6 border border-accent/20">
+                    <CheckCircle2 className="w-10 h-10" />
+                  </div>
+                  <h4 className="text-2xl text-textPrimary font-bodoni uppercase mb-2">Message Received</h4>
+                  <p className="text-textSecondary text-sm">Thank you for reaching out. I'll get back to you soon.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <input 
-                      type="text" 
-                      placeholder="Your Name" 
-                      required
-                      className="w-full bg-transparent border-b-2 border-midnight/10 py-4 focus:border-apres outline-none font-sans text-lg transition-all"
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    />
+                <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                      <label className="text-[10px] uppercase font-bold text-textMuted tracking-widest pl-1">Full Name</label>
+                      <input 
+                        type="text" 
+                        required
+                        className="w-full bg-secondary/50 border border-border px-6 py-4 rounded-xl focus:border-accent focus:bg-secondary outline-none text-textPrimary transition-all placeholder:text-textMuted/30"
+                        placeholder="John Doe"
+                        value={formData.name}
+                        onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[10px] uppercase font-bold text-textMuted tracking-widest pl-1">Email Address</label>
+                      <input 
+                        type="email" 
+                        required
+                        className="w-full bg-secondary/50 border border-border px-6 py-4 rounded-xl focus:border-accent focus:bg-secondary outline-none text-textPrimary transition-all placeholder:text-textMuted/30"
+                        placeholder="john@example.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      />
+                    </div>
                   </div>
-                  <div>
-                    <input 
-                      type="email" 
-                      placeholder="Email Address" 
-                      required
-                      className="w-full bg-transparent border-b-2 border-midnight/10 py-4 focus:border-apres outline-none font-sans text-lg transition-all"
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    />
-                  </div>
-                  <div>
+                  <div className="space-y-2">
+                    <label className="text-[10px] uppercase font-bold text-textMuted tracking-widest pl-1">Your Message</label>
                     <textarea 
-                      placeholder="How can I help you?" 
-                      rows={4}
+                      rows={5}
                       required
-                      className="w-full bg-transparent border-b-2 border-midnight/10 py-4 focus:border-apres outline-none font-sans text-lg transition-all resize-none"
+                      className="w-full bg-secondary/50 border border-border px-6 py-4 rounded-xl focus:border-accent focus:bg-secondary outline-none text-textPrimary transition-all resize-none placeholder:text-textMuted/30"
+                      placeholder="How can I help you today?"
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                     ></textarea>
                   </div>
                   <button
-                  type="submit"
-                  className="w-full bg-apres hover:bg-arctic hover:text-midnight text-white py-5 font-sans text-button uppercase transition-all flex items-center justify-center gap-3 group"
-                >
+                    type="submit"
+                    className="w-full bg-accent hover:bg-[#FF4D6D] text-white py-5 rounded-2xl font-sans text-xs font-bold uppercase tracking-[0.2em] transition-all shadow-glow hover:shadow-glow-strong flex items-center justify-center gap-4 group"
+                  >
                     Send Message
+                    <div className="w-1.5 h-1.5 bg-white rounded-full group-hover:scale-150 transition-transform" />
                   </button>
                 </form>
               )}
