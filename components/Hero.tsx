@@ -1,5 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -8,8 +9,6 @@ const Hero: React.FC = () => {
     const handleScroll = () => {
       if (parallaxRef.current) {
         const scrolled = window.scrollY;
-        // Move the text at 20% of the scroll speed for a subtle effect
-        // We preserve the initial -50% centering and -90deg rotation
         parallaxRef.current.style.transform = `translateY(calc(-50% + ${scrolled * 0.2}px)) rotate(-90deg)`;
       }
     };
@@ -17,6 +16,29 @@ const Hero: React.FC = () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
+  };
 
   return (
     <section id="home" className="relative bg-arctic pt-section pb-[120px] px-6 md:px-12 overflow-hidden scroll-mt-32">
@@ -30,26 +52,43 @@ const Hero: React.FC = () => {
         </span>
       </div>
       
-      <div className="max-w-6xl mx-auto relative z-10">
-        <p className="text-midnight font-sans text-paragraph mb-4 tracking-wide opacity-90 reveal">
+      <motion.div 
+        className="max-w-6xl mx-auto relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.p 
+          variants={itemVariants}
+          className="text-midnight font-sans text-paragraph mb-4 tracking-wide opacity-90"
+        >
           Hello, My name is
-        </p>
-        <h1 className="font-serif text-[clamp(3.5rem,11vw,11rem)] font-bold text-midnight leading-[0.85] tracking-tighter mb-12 uppercase max-w-4xl">
+        </motion.p>
+        <motion.h1 
+          variants={itemVariants}
+          className="font-serif text-[clamp(3.5rem,11vw,11rem)] font-bold text-midnight leading-[0.85] tracking-tighter mb-12 uppercase max-w-4xl"
+        >
           LAKSHMI <br /> HARSHITHA
-        </h1>
-        <p className="text-midnight font-sans text-paragraph md:text-[20px] mb-12 max-w-2xl font-light tracking-wide opacity-80 leading-relaxed reveal delay-200">
+        </motion.h1>
+        <motion.p 
+          variants={itemVariants}
+          className="text-midnight font-sans text-paragraph md:text-[20px] mb-12 max-w-2xl font-light tracking-wide opacity-80 leading-relaxed"
+        >
           AI & Machine Learning Undergraduate | <span className="font-medium">NLP & GenAI Enthusiast</span>
-        </p>
+        </motion.p>
         
-        <div className="flex flex-col sm:flex-row gap-6 reveal delay-300">
+        <motion.div 
+          variants={itemVariants}
+          className="flex flex-col sm:flex-row gap-6"
+        >
           <button className="bg-mountain hover:bg-apres text-white px-10 py-4 font-sans text-button uppercase transition-all transform hover:-translate-y-1 shadow-lg">
             Download CV
           </button>
           <a href="#contact" className="border-2 border-midnight text-midnight hover:bg-apres hover:border-apres hover:text-white px-10 py-4 font-sans text-button uppercase transition-all transform hover:-translate-y-1 text-center">
             Let's Talk
           </a>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

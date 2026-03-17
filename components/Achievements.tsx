@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { ScrollReveal, StaggerContainer, StaggerItem } from './ScrollReveal';
 
 const Achievements: React.FC = () => {
   const achievements = [
@@ -16,21 +17,27 @@ const Achievements: React.FC = () => {
       <div className="absolute bottom-10 left-10 text-apres text-2xl opacity-50">★</div>
       
       <div className="max-w-6xl mx-auto text-center md:text-left">
-        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-midnight mb-16 inline-block relative reveal">
-          Achievements & Activities
-          <span className="absolute -right-16 top-0 text-apres text-5xl">★</span>
-        </h2>
+        <ScrollReveal>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-midnight mb-16 inline-block relative">
+            Achievements & Activities
+            <span className="absolute -right-16 top-0 text-apres text-5xl">★</span>
+          </h2>
+        </ScrollReveal>
         
-        <div className="grid md:grid-cols-2 gap-8">
-          {achievements.map((item, idx) => (
-            <div key={idx} className={`bg-mountain border border-midnight/10 p-card-p flex items-center gap-6 hover:bg-apres/10 transition-all reveal delay-${(idx + 1) * 100}`}>
-              <span className="text-4xl">{item.icon}</span>
-              <p className="font-sans font-medium text-white text-h3 text-left">
-                {item.text}
-              </p>
-            </div>
-          ))}
-        </div>
+        <StaggerContainer>
+          <div className="grid md:grid-cols-2 gap-8">
+            {achievements.map((item, idx) => (
+              <StaggerItem key={idx}>
+                <div className="bg-mountain border border-midnight/10 p-card-p flex items-center gap-6 hover:bg-apres/10 transition-all h-full">
+                  <span className="text-4xl">{item.icon}</span>
+                  <p className="font-sans font-medium text-white text-h3 text-left">
+                    {item.text}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </div>
+        </StaggerContainer>
       </div>
     </section>
   );
