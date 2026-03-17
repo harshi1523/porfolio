@@ -9,16 +9,52 @@ const ContactForm: React.FC = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', message: '' });
-    }, 3000);
+    setIsSubmitting(true);
+    setError(null);
+
+    // You will need to get your actual access key from https://web3forms.com/
+    // and replace the 'YOUR_ACCESS_KEY_HERE' placeholder.
+    const accessKey = 'YOUR_ACCESS_KEY_HERE';
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `New Portfolio Message from ${formData.name}`,
+          from_name: 'Portfolio Contact Form',
+          to_email: 'peravalilakshmiharshitha@gmail.com'
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setError(result.message || 'Something went wrong. Please try again.');
+        console.error('Form submission error:', result);
+      }
+    } catch (err) {
+      setError('Connection error. Please check your internet and try again.');
+      console.error('Network error:', err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -118,13 +154,22 @@ const ContactForm: React.FC = () => {
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                     ></textarea>
                   </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-accent hover:bg-[#FF4D6D] text-white py-5 rounded-2xl font-sans text-xs font-bold uppercase tracking-[0.2em] transition-all shadow-glow hover:shadow-glow-strong flex items-center justify-center gap-4 group"
-                  >
-                    Send Message
-                    <div className="w-1.5 h-1.5 bg-white rounded-full group-hover:scale-150 transition-transform" />
-                  </button>
+                  <div className="space-y-4">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className={`w-full bg-accent hover:bg-[#FF4D6D] text-white py-5 rounded-2xl font-sans text-xs font-bold uppercase tracking-[0.2em] transition-all shadow-glow hover:shadow-glow-strong flex items-center justify-center gap-4 group ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                    >
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                      {!isSubmitting && <div className="w-1.5 h-1.5 bg-white rounded-full group-hover:scale-150 transition-transform" />}
+                    </button>
+                    
+                    {error && (
+                      <p className="text-accent text-[10px] uppercase font-bold tracking-widest text-center mt-2 animate-pulse">
+                        {error}
+                      </p>
+                    )}
+                  </div>
                 </form>
               )}
             </div>
