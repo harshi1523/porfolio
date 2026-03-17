@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Github } from 'lucide-react';
+import { Github, ExternalLink, Briefcase } from 'lucide-react';
 import { ScrollReveal, StaggerContainer, StaggerItem } from './ScrollReveal';
 
 const Projects: React.FC = () => {
@@ -23,12 +23,17 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="bg-[#e2e4e6] py-section px-6 md:px-12 relative overflow-hidden scroll-mt-32">
+    <section id="projects" className="bg-primary py-section px-6 md:px-12 relative overflow-hidden scroll-mt-32">
+      <div className="absolute top-1/4 right-0 w-[30vw] h-[30vw] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+      
       <div className="max-w-[1400px] w-full mx-auto relative z-10">
         <ScrollReveal>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-zinc-800 mb-20 tracking-tight">
-            Selected Projects
-          </h2>
+          <div className="flex items-center gap-4 mb-16">
+            <div className="p-3 bg-accent/10 rounded-xl border border-accent/20 text-accent">
+              <Briefcase className="w-6 h-6" />
+            </div>
+            <h2 className="font-bodoni text-h2 text-textPrimary uppercase tracking-tight">Selected <span className="text-accent">Projects</span></h2>
+          </div>
         </ScrollReveal>
 
         <StaggerContainer>
@@ -36,17 +41,20 @@ const Projects: React.FC = () => {
             {projects.map((project, idx) => (
               <StaggerItem key={idx}>
                 <div
-                  className="bg-[#1c1c1a] rounded-sm p-10 shadow-[20px_40px_60px_-15px_rgba(0,0,0,0.3)] hover:shadow-[30px_50px_80px_-20px_rgba(0,0,0,0.4)] transition-all duration-700 ease-out transform hover:-translate-y-4 flex flex-col h-full"
+                  className="bg-card border border-border p-8 rounded-2xl accent-glow group transition-all duration-300 hover:bg-hover hover:-translate-y-2 hover:border-accent flex flex-col h-full"
                 >
-                  <h3 className="font-sans font-bold text-white text-h3 leading-[1.2] mb-8 whitespace-pre-line">
+                  <h3 className="font-bodoni text-2xl text-textPrimary mb-6 tracking-tight uppercase transition-colors group-hover:text-accent whitespace-pre-line">
                     {project.title}
                   </h3>
-                  <p className="font-sans text-zinc-300 mb-12 leading-relaxed text-paragraph flex-grow">
+                  <p className="font-sans text-textSecondary mb-8 leading-relaxed text-paragraph flex-grow">
                     {project.desc}
                   </p>
-                  <div className="flex flex-wrap gap-2.5 mt-auto">
+                  <div className="flex flex-wrap gap-2 mt-auto">
                     {project.tech.map((t, i) => (
-                      <span key={i} className="text-pill text-zinc-300 bg-white/5 px-4 py-1.5 rounded-full">
+                      <span 
+                        key={i} 
+                        className="font-sans text-[11px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-lg border border-border/50 text-textSecondary bg-[#222738] hover:border-accent hover:text-accent transition-all"
+                      >
                         {t}
                       </span>
                     ))}
@@ -63,13 +71,10 @@ const Projects: React.FC = () => {
               href="https://github.com/harshi1523?tab=repositories" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-4 bg-[#1c1c1a] hover:bg-zinc-800 text-white px-12 py-5 font-sans text-button uppercase transition-all overflow-hidden"
+              className="group relative inline-flex items-center gap-4 bg-accent hover:bg-[#FF4D6D] text-white px-12 py-5 font-sans text-button uppercase transition-all rounded-2xl shadow-glow hover:shadow-glow-strong"
             >
-              <span className="relative z-10 flex items-center gap-3">
-                <Github className="w-5 h-5" />
-                More on GitHub
-              </span>
-              <div className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              <Github className="w-5 h-5" />
+              More on GitHub
             </a>
           </div>
         </ScrollReveal>
