@@ -1,46 +1,55 @@
 
 import React from 'react';
+import { Code, Brain, Settings } from 'lucide-react';
 
 const Skills: React.FC = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["Java", "Python", "C", "MySQL"]
+      icon: <Code className="w-5 h-5" />,
+      skills: ["Java", "Python", "C", "MySQL", "HTML"]
     },
     {
-      title: "Web Technologies",
-      skills: ["HTML5", "CSS3", "JavaScript"]
+      title: "AI & Data Science",
+      icon: <Brain className="w-5 h-5" />,
+      skills: [
+        "Machine Learning",
+        "Natural Language Processing",
+        "TensorFlow",
+        "PyTorch",
+        "Scikit-learn",
+        "Pandas"
+      ]
     },
     {
-      title: "AI/ML Frameworks",
-      skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Pandas"]
-    },
-    {
-      title: "Specializations",
-      skills: ["Artificial Intelligence", "Machine Learning", "NLP", "Prompt Engineering", "Power BI"]
+      title: "Tools & Platforms",
+      icon: <Settings className="w-5 h-5" />,
+      skills: ["GitHub", "JIRA", "Firebase", "AI Studio", "Lovable AI", "Antigravity"]
     }
   ];
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-slopes">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex items-center gap-6 mb-16 reveal">
-          <h2 className="font-serif text-5xl font-bold text-midnight">Technical Skills</h2>
-          <div className="flex-1 h-[1px] bg-midnight/20"></div>
-        </div>
+    <section id="skills" className="py-32 px-6 md:px-12 bg-[#F8F9FA] scroll-mt-32">
+      <div className="max-w-[1400px] w-full mx-auto relative z-10">
+        <h2 className="font-serif text-[4rem] md:text-[5.5rem] font-medium text-midnight mb-20 tracking-tight">
+          Technical Skills
+        </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 items-start">
           {skillCategories.map((cat, idx) => (
             <div key={idx} className={`relative reveal delay-${(idx + 1) * 100}`}>
-              <h3 className="font-sans font-bold text-midnight text-sm tracking-widest uppercase mb-8 flex items-center gap-2">
-                {cat.title}
-                {idx < skillCategories.length - 1 && <span className="text-apres text-lg">★</span>}
-              </h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex items-center gap-3 mb-10 text-zinc-400">
+                {cat.icon}
+                <h3 className="font-sans font-bold text-[13px] tracking-[0.2em] uppercase">
+                  {cat.title}
+                </h3>
+              </div>
+              
+              <div className="flex flex-wrap gap-2">
                 {cat.skills.map((skill, sIdx) => (
                   <span 
                     key={sIdx} 
-                    className="px-4 py-2 border border-midnight/10 bg-mountain text-white font-sans text-sm font-medium rounded-full hover:border-apres hover:bg-apres/20 transition-all cursor-default"
+                    className="px-4 py-2 bg-[#1A1A1A] border border-[#333333] text-zinc-300 font-sans text-sm font-medium rounded-[50px] transition-all duration-300 cursor-default hover:border-purple-500/50 hover:bg-[#252525] hover:shadow-[0_0_15px_rgba(168,85,247,0.15)] hover:-translate-y-0.5"
                   >
                     {skill}
                   </span>

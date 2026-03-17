@@ -21,7 +21,7 @@ const Education: React.FC = () => {
   ];
 
   return (
-    <section id="education" className="py-32 px-6 md:px-12 bg-arctic overflow-hidden scroll-mt-32">
+    <section id="education" className="pt-12 pb-32 px-6 md:px-12 bg-arctic overflow-hidden scroll-mt-32">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-24 reveal">

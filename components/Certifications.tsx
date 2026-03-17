@@ -3,9 +3,10 @@ import React from 'react';
 
 const Certifications: React.FC = () => {
   const certs = [
-    { name: "What Is Generative AI", issuer: "LinkedIn" },
-    { name: "Gen AI for IT", issuer: "Infosys" },
-    { name: "Scrum Fundamentals Certification", issuer: "Scrum - ID: 1137883" }
+    { name: "Generative AI", issuer: "LinkedIn Learning" },
+    { name: "AI Fluency & Frameworks", issuer: "Anthropic" },
+    { name: "Scrum Fundamentals Certification", issuer: "Scrum" },
+    { name: "Machine Learning", issuer: "SkillDzire" }
   ];
 
   return (
