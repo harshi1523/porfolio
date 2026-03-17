@@ -46,7 +46,7 @@ const ContactForm: React.FC = () => {
               </div>
             </div>
             <a 
-              href="https://linkedin.com/in/lakshmi-harshitha"
+              href="https://www.linkedin.com/in/lakshmi-harshitha-"
               target="_blank"
               className="inline-block bg-apres hover:bg-apres/90 text-white font-sans font-bold px-10 py-4 tracking-widest uppercase shadow-xl transition-all transform hover:-translate-y-1"
             >

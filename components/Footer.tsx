@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
               <h3 className="font-sans font-bold text-apres text-xs uppercase tracking-widest mb-6">Connect</h3>
               <div className="flex md:justify-end gap-6">
                 <a href="#" className="hover:text-apres text-2xl transition-colors">𝕏</a>
-                <a href="#" className="hover:text-apres text-2xl transition-colors">in</a>
+                <a href="https://www.linkedin.com/in/lakshmi-harshitha-" target="_blank" rel="noopener noreferrer" className="hover:text-apres text-2xl transition-colors">in</a>
                 <a href="https://github.com/harshi1523?tab=repositories" target="_blank" rel="noopener noreferrer" className="hover:text-apres text-2xl transition-colors">gh</a>
               </div>
             </div>

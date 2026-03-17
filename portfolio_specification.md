@@ -32,7 +32,7 @@ The application is structured into the following functional components:
 
 1. **Navbar**: Fixed header with smooth scroll navigation links (Home, About, Projects, Education, Internship, Contact).
 2. **Hero**: High-impact introduction with a parallax background effect and primary call-to-actions (CV Download, Contact).
-3. **ContactBar**: Vertical floating social links (LinkedIn, GitHub, Email).
+3. **ContactBar**: Vertical floating social links (LinkedIn: https://www.linkedin.com/in/lakshmi-harshitha-, GitHub: https://github.com/harshi1523?tab=repositories, Email).
 4. **About**: Two-column layout focusing on professional background and core philosophy.
 5. **Education**: Chronological timeline of academic qualifications with pulsing markers.
 6. **Skills**: A 3-column grid featuring dark-themed skill "pills" with hover glows and monochrome icons.

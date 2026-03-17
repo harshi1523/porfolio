@@ -14,7 +14,13 @@ const ContactBar: React.FC = () => {
         <div className="flex items-center gap-2">
           <span className="text-apres">🔗</span> 
           <a href="https://github.com/harshi1523?tab=repositories" target="_blank" rel="noopener noreferrer" className="hover:text-apres transition-colors">
-            github.com/harshi1523
+            GitHub
+          </a>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="text-apres">💼</span> 
+          <a href="https://www.linkedin.com/in/lakshmi-harshitha-" target="_blank" rel="noopener noreferrer" className="hover:text-apres transition-colors">
+            LinkedIn
           </a>
         </div>
       </div>
