@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { ScrollReveal } from './ScrollReveal';
-import { Phone, Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, Linkedin } from 'lucide-react';
 
 const ContactBar: React.FC = () => {
   return (
@@ -9,15 +9,11 @@ const ContactBar: React.FC = () => {
       <ScrollReveal>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-6 md:gap-16 text-[13px] font-sans text-textSecondary uppercase tracking-widest font-bold">
           <div className="flex items-center gap-3 group transition-colors hover:text-textPrimary">
-            <Phone className="w-4 h-4 text-accent" />
-            <span>+91 9392959397</span>
-          </div>
-          <div className="flex items-center gap-3 group transition-colors hover:text-textPrimary">
             <Mail className="w-4 h-4 text-accent" />
             <span>peravalilakshmiharshitha@gmail.com</span>
           </div>
           <a 
-            href="https://github.com/harshi1523?tab=repositories" 
+            href="https://github.com/lakshmiharshithaperavali" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="flex items-center gap-3 group transition-all hover:text-highlight"
