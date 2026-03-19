@@ -34,7 +34,7 @@ const Internship: React.FC = () => {
                   </div>
                 </div>
                 <div className="text-textMuted font-sans text-xs font-bold uppercase tracking-[0.2em] bg-secondary px-4 py-2 rounded-xl border border-border">
-                  Aug 2024 — Present
+                  Dec 2025 — Present
                 </div>
               </div>
               
